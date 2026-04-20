@@ -1,0 +1,44 @@
+---
+import "@/styles/global.css";
+import { Font } from "astro:assets";
+
+import Header from "@/components/common/Header.astro";
+import Footer from "@/components/common/Footer.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = "Astro",
+  description = "Astro es un nuevo framework para construir sitios web rápidos y modernos.",
+} = Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+
+    <Font cssVariable="--font-inter" preload />
+    <Font cssVariable="--font-dm-serif-display" preload />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body class="overflow-x-hidden bg-gray-50 text-teal-950">
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  body {
+    font-family: var(--font-inter), system-ui, sans-serif;
+  }
+  .font-serif {
+    font-family: var(--font-dm-serif-display), serif;
+  }
+</style>

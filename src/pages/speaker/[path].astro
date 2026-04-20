@@ -1,0 +1,36 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Container from "@/components/common/Container.astro";
+import Typography from "@/components/common/Typography.astro";
+
+import speakers from "@/assets/data/speakers.json";
+
+export function getStaticPaths() {
+  return speakers.map((speaker) => {
+    return {
+      params: { path: speaker.url },
+    };
+  });
+}
+
+const { path } = Astro.params;
+
+const page = speakers.find((speaker) => speaker.url === path);
+if (!page) return Astro.redirect("/");
+---
+
+<Layout title={`Speaker: ${page.name}`}>
+  <Container
+    title={`Speaker: ${page.name}`}
+    titleAs="h1"
+    className="flex flex-col gap-4 prose"
+  >
+    <Typography as="p" variant="p" color="inherit">
+      {page.description}
+    </Typography>
+    <Typography as="p" variant="p" color="inherit" class:list="font-bold">
+      {page.city ? `${page.city}, ` : ""}
+      {page.country}
+    </Typography>
+  </Container>
+</Layout>

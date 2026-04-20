@@ -1,0 +1,56 @@
+[
+  {
+    "id": "speaker-1",
+    "url": "dr-oswaldo-ramos",
+    "name": "Dr. Oswaldo Ramos",
+    "description": "Especialista Diagnóstico por imagen, Expresidente asociación radiológica de Venezuela, expresidente y profesor del CIR, Docente, Direccion de unidades Especialista Diagnóstico por imagen, imágenes IA",
+    "country": "Venezuela",
+    "city": "",
+    "image": "speaker-1.jpg"
+  },
+  {
+    "id": "speaker-2",
+    "url": "dr-daniel-noreña",
+    "name": "Dr. Daniel Noreña Rengifo",
+    "description": "Especialista Diagnóstico por imagen, Fellow Musculoesquelético, experto en Ecografía Dermatologica y Estética. Dermasonido Medellín Colombia.",
+    "country": "Colombia",
+    "city": "Medellín",
+    "image": "speaker-2.jpg"
+  },
+  {
+    "id": "speaker-3",
+    "url": "dra-daniela-rodriguez",
+    "name": "Dra. Daniela Carolina Rodríguez González",
+    "description": "Especialista Diagnóstico por imagen. Fundación Valle de Lili",
+    "country": "Colombia",
+    "city": "Cali",
+    "image": "speaker-3.jpg"
+  },
+  {
+    "id": "speaker-4",
+    "url": "dr-miguel-vega-arango",
+    "name": "Dr. Miguel Vega Arango",
+    "description": "Especialista Diagnóstico por imagen, Fellowship Musculoesquelético, McGill University Montreal, Canada. Docente Univ. Pontificia Bolivariana. Medellin Colombia.",
+    "country": "Colombia",
+    "city": "Medellín",
+    "image": "speaker-4.jpg"
+  },
+  {
+    "id": "speaker-5",
+    "url": "dr-jesus-sanabria",
+    "name": "Dr. Jesús Sanabria",
+    "description": "Especialista Diagnóstico por imagen. Subespecialidad en imagen corporal Hospital Italiano, Buenos Aires, Argentina",
+    "country": "Colombia",
+    "city": "Cúcuta",
+    "image": "speaker-5.jpg"
+  },
+  {
+    "id": "speaker-6",
+    "url": "dr-sergio-andres-galvis",
+    "name": "Dr. Sergio Andrés Galvis",
+    "description": "Especialista diagnóstico por imágenes con fellow en músculo esqueletico, Instituto Rossi, Buenos Aires, Argentina",
+    "country": "Colombia",
+    "city": "",
+    "image": "speaker-6.jpg"
+  }
+]

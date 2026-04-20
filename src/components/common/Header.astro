@@ -1,0 +1,24 @@
+---
+import logo from "@/assets/img/logos/logo-asonorterx.png";
+---
+
+<header>
+  <div class="bg-teal-700 text-green-50">
+    <nav class="flex items-center justify-between gap-2 p-4 mx-auto max-w-7xl">
+      <a href="/" class="flex items-center space-x-2">
+        <img
+          src={logo.src}
+          alt="ASONORTERX Logo"
+          class="transition-transform max-h-12 hover:scale-105 drop-shadow-lg"
+        />
+        <span class="text-xs font-semibold md:text-sm hover:underline">
+          Asociación Nortesantandereana de Radiología
+        </span>
+      </a>
+      <ul class="flex space-x-4 text-xs font-semibold md:text-sm">
+        <li><a href="/about" class="hover:underline">About</a></li>
+        <li><a href="/contact" class="hover:underline">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

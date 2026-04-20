@@ -1,17 +1,45 @@
 ---
+import Container from "@/components/common/Container.astro";
+import Typography from "@/components/common/Typography.astro";
+import Layout from "@/layouts/Layout.astro";
 
+import speakers from "@/assets/data/speakers.json";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <Container
+    title="XV Simposio Internacional Nortesantandereano de Radiología"
+    titleAs="h1"
+    class:list="flex flex-col gap-4 prose"
+  >
+    <div class="flex justify-center w-full -mt-4 md:-mt-8">
+      <div
+        class="bg-linear-to-r to-teal-900 from-blue-900 text-white text-center font-semibold px-6 py-1"
+      >
+        <span class:list={"font-serif tracking-wider text-lg md:text-xl"}>
+          Estudios Imagenológicos Huérfanos
+        </span>
+      </div>
+    </div>
+    <Typography as="p" variant="p" color="inherit">
+      Astro es un nuevo framework para construir sitios web rápidos y modernos.
+      Con Astro, puedes crear sitios web que se cargan rápidamente y ofrecen una
+      experiencia de usuario fluida, sin sacrificar la flexibilidad o la
+      capacidad de personalización.
+    </Typography>
+  </Container>
+
+  <Container title="Speakers" titleAs="h2" titleVariant="h2">
+    <div
+      class="items-center gap-4 flex flex-col md:flex-row md:flex-wrap justify-center px-8 md:px-24 text-center"
+    >
+      {
+        speakers.map((speaker) => (
+          <a href={`/speaker/${speaker.url}`} class="hover:underline">
+            {speaker.name}
+          </a>
+        ))
+      }
+    </div>
+  </Container>
+</Layout>

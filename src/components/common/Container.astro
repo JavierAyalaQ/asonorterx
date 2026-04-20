@@ -1,0 +1,36 @@
+---
+import type { HTMLTag, Polymorphic } from "astro/types";
+import Typography from "@/components/common/Typography.astro";
+
+type Props<Tag extends HTMLTag> = Polymorphic<{
+  as: Tag;
+  className?: string;
+  title?: string;
+  titleAs?: string;
+  titleVariant?: string;
+}>;
+
+const {
+  as: Tag = "section",
+  title,
+  titleAs = "h1",
+  titleVariant = "h1",
+  class: className = "",
+} = Astro.props;
+---
+
+<Tag class:list={[`max-w-7xl px-8 md:px-24 my-20 mx-auto ${className}`]}>
+  {
+    title && (
+      <Typography
+        as={titleAs}
+        variant={titleVariant}
+        color="inherit"
+        class="block mb-4 md:mb-8"
+      >
+        {title}
+      </Typography>
+    )
+  }
+  <slot />
+</Tag>
