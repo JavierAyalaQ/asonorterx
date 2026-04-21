@@ -1,45 +1,119 @@
 ---
-import Container from "@/components/common/Container.astro";
-import Typography from "@/components/common/Typography.astro";
+import Container from "@/components/Container.astro";
+import Typography from "@/components/Typography.astro";
 import Layout from "@/layouts/Layout.astro";
 
 import speakers from "@/assets/data/speakers.json";
+import program from "@/assets/data/program.json";
 ---
 
 <Layout>
-  <Container
-    title="XV Simposio Internacional Nortesantandereano de Radiología"
-    titleAs="h1"
-    class:list="flex flex-col gap-4 prose"
-  >
-    <div class="flex justify-center w-full -mt-4 md:-mt-8">
-      <div
-        class="bg-linear-to-r to-teal-900 from-blue-900 text-white text-center font-semibold px-6 py-1"
-      >
-        <span class:list={"font-serif tracking-wider text-lg md:text-xl"}>
-          Estudios Imagenológicos Huérfanos
-        </span>
-      </div>
-    </div>
-    <Typography as="p" variant="p" color="inherit">
-      Astro es un nuevo framework para construir sitios web rápidos y modernos.
-      Con Astro, puedes crear sitios web que se cargan rápidamente y ofrecen una
-      experiencia de usuario fluida, sin sacrificar la flexibilidad o la
-      capacidad de personalización.
-    </Typography>
-  </Container>
-
-  <Container title="Speakers" titleAs="h2" titleVariant="h2">
-    <div
-      class="items-center gap-4 flex flex-col md:flex-row md:flex-wrap justify-center px-8 md:px-24 text-center"
+  <div class="bg-gray-100">
+    <Container
+      title="XV Simposio Internacional Nortesantandereano de Radiología"
+      titleAs="h1"
+      class:list="flex flex-col gap-4 prose bg-linear-to-r bg-clip-text text-transparent from-teal-900 to-blue-900"
     >
-      {
-        speakers.map((speaker) => (
-          <a href={`/speaker/${speaker.url}`} class="hover:underline">
-            {speaker.name}
-          </a>
-        ))
-      }
-    </div>
-  </Container>
+      <div class="flex justify-center w-full -mt-4 md:-mt-8">
+        <div
+          class="bg-linear-to-r to-teal-900 from-blue-900 text-white text-center font-semibold px-6 py-1"
+        >
+          <span class:list={"font-serif tracking-wider text-lg md:text-xl"}>
+            Estudios Imagenológicos Huérfanos
+          </span>
+        </div>
+      </div>
+
+      <Typography as="p" variant="p" color="primary">
+        La Asociación Nortesantandereana de Radiología se complace en anunciar
+        la realización del XV Simposio Internacional Nortesantandereano de
+        Radiología, que se llevará a cabo los días 11 y 12 de septiembre de
+        2026, en el Hotel Casino Internacional, Cúcuta, Colombia.
+      </Typography>
+
+      <Typography as="p" variant="p" color="primary">
+        Este evento reunirá a destacados radiólogos, especialistas en
+        imagenología y profesionales de la salud de todo el mundo para compartir
+        conocimientos, avances tecnológicos y experiencias clínicas relacionadas
+        con los estudios imagenológicos huérfanos. El simposio ofrecerá una
+        plataforma para la discusión de casos clínicos complejos, presentaciones
+        magistrales, talleres prácticos.
+      </Typography>
+    </Container>
+  </div>
+
+  <div id="speakers" class="bg-white">
+    <Container title="Speakers" titleAs="h2" titleVariant="h2">
+      <div class="grid grid-cols-2 xl:grid-cols-3 gap-8">
+        {
+          speakers.map((speaker) => (
+            <div class="flex flex-col items-center gap-2 text-pretty">
+              <img src={`/speakers/${speaker.image}`} alt={speaker.name} />
+              <Typography
+                as="a"
+                variant="strong"
+                color="secondary"
+                href={`/speaker/${speaker.url}`}
+                class="hover:underline font-semibold text-center"
+              >
+                {speaker.name}
+              </Typography>
+              <Typography as="p" variant="small" color="primary">
+                {speaker.description}
+              </Typography>
+            </div>
+          ))
+        }
+      </div>
+    </Container>
+  </div>
+
+  <div id="schedule" class="bg-gray-100">
+    <Container title="Programación" titleAs="h2" titleVariant="h2">
+      <div>
+        {
+          (
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8">
+              {/* Viernes */}
+              <div>
+                <Typography as="h4" variant="h4" color="secondary">
+                  Viernes, 11 de septiembre
+                </Typography>
+                <div class="mt-4 space-y-2">
+                  {program[0].friday_september_11?.map((event) => (
+                    <div class="border-l-4 border-teal-700 pl-4">
+                      <Typography as="strong" variant="strong" color="primary">
+                        {event.start} - {event.end}
+                      </Typography>
+                      <Typography as="p" variant="small" color="primary">
+                        {event.title}
+                      </Typography>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              {/* Sábado */}
+              <div>
+                <Typography as="h4" variant="h4" color="secondary">
+                  Sábado, 12 de septiembre
+                </Typography>
+                <div class="mt-4 space-y-2">
+                  {program[1].saturday_september_12?.map((event) => (
+                    <div class="border-l-4 border-teal-700 pl-4">
+                      <Typography as="strong" variant="strong" color="primary">
+                        {event.start} - {event.end}
+                      </Typography>
+                      <Typography as="p" variant="small" color="primary">
+                        {event.title}
+                      </Typography>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )
+        }
+      </div>
+    </Container>
+  </div>
 </Layout>

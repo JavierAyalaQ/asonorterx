@@ -3,10 +3,10 @@
     "id": "speaker-1",
     "url": "dr-oswaldo-ramos",
     "name": "Dr. Oswaldo Ramos",
-    "description": "Especialista Diagnóstico por imagen, Expresidente asociación radiológica de Venezuela, expresidente y profesor del CIR, Docente, Direccion de unidades Especialista Diagnóstico por imagen, imágenes IA",
+    "description": "Especialista Diagnóstico por imagen, Expresidente Asociación Radiológica de Venezuela, expresidente y profesor del CIR, Docente, Direccion de unidades. Especialista Diagnóstico por imagen, imágenes IA.",
     "country": "Venezuela",
     "city": "",
-    "image": "speaker-1.jpg"
+    "image": "speaker-1.png"
   },
   {
     "id": "speaker-2",
@@ -15,25 +15,25 @@
     "description": "Especialista Diagnóstico por imagen, Fellow Musculoesquelético, experto en Ecografía Dermatologica y Estética. Dermasonido Medellín Colombia.",
     "country": "Colombia",
     "city": "Medellín",
-    "image": "speaker-2.jpg"
+    "image": "speaker-2.png"
   },
   {
     "id": "speaker-3",
-    "url": "dra-daniela-rodriguez",
-    "name": "Dra. Daniela Carolina Rodríguez González",
-    "description": "Especialista Diagnóstico por imagen. Fundación Valle de Lili",
+    "url": "dra-diana-rodriguez",
+    "name": "Dra. Diana Milena Rodríguez Merchán ",
+    "description": "Obstetra y ginecóloga, Universidad Nacional de Colombia. Ginecología urológica, Universidad Nacional de Colombia. Ecografista de Piso pélvico, Universidad de Chile. Coordinadora Unidad de Uroginecología, Sura Medellín Coordinadora. Unidad de Piso pélvico, Clínica del Prado. Docente Uroginecología, Universidad Nacional de Colombia.",
     "country": "Colombia",
     "city": "Cali",
-    "image": "speaker-3.jpg"
+    "image": "speaker-3.png"
   },
   {
     "id": "speaker-4",
     "url": "dr-miguel-vega-arango",
     "name": "Dr. Miguel Vega Arango",
-    "description": "Especialista Diagnóstico por imagen, Fellowship Musculoesquelético, McGill University Montreal, Canada. Docente Univ. Pontificia Bolivariana. Medellin Colombia.",
+    "description": "Especialista Diagnóstico por imagen, Fellowship Musculoesquelético, McGill University Montreal, Canada. Docente Universidad Pontificia Bolivariana, Medellin, Colombia.",
     "country": "Colombia",
     "city": "Medellín",
-    "image": "speaker-4.jpg"
+    "image": "speaker-4.png"
   },
   {
     "id": "speaker-5",
@@ -42,7 +42,7 @@
     "description": "Especialista Diagnóstico por imagen. Subespecialidad en imagen corporal Hospital Italiano, Buenos Aires, Argentina",
     "country": "Colombia",
     "city": "Cúcuta",
-    "image": "speaker-5.jpg"
+    "image": "speaker-5.png"
   },
   {
     "id": "speaker-6",
@@ -51,6 +51,6 @@
     "description": "Especialista diagnóstico por imágenes con fellow en músculo esqueletico, Instituto Rossi, Buenos Aires, Argentina",
     "country": "Colombia",
     "city": "",
-    "image": "speaker-6.jpg"
+    "image": "speaker-6.png"
   }
 ]

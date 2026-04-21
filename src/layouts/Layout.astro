@@ -2,23 +2,23 @@
 import "@/styles/global.css";
 import { Font } from "astro:assets";
 
-import Header from "@/components/common/Header.astro";
-import Footer from "@/components/common/Footer.astro";
+import Header from "@/components/layout/Header.astro";
+import Footer from "@/components/layout/Footer.astro";
+import BackToTop from "@/components/BackToTop.astro";
 
 interface Props {
   title?: string;
   description?: string;
 }
 const {
-  title = "Astro",
-  description = "Astro es un nuevo framework para construir sitios web rápidos y modernos.",
+  title = "XV Simposio Internacional Nortesantandereano de Radiología",
+  description = "Programación e información adicional del XV Simposio Internacional Nortesantandereano de Radiología, celebrado los días 11 y 12 de septiembre de 2026, en el Hotel Casino Internacional, Cúcuta, Colombia.",
 } = Astro.props;
 ---
 
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
 
@@ -27,16 +27,18 @@ const {
     <title>{title}</title>
     <meta name="description" content={description} />
   </head>
-  <body class="overflow-x-hidden bg-gray-50 text-teal-950">
+  <body class="overflow-x-hidden bg-gray-100 text-teal-950">
     <Header />
     <slot />
     <Footer />
+    <BackToTop />
   </body>
 </html>
 
 <style is:global>
   body {
     font-family: var(--font-inter), system-ui, sans-serif;
+    scroll-behavior: smooth;
   }
   .font-serif {
     font-family: var(--font-dm-serif-display), serif;

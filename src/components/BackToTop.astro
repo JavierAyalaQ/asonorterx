@@ -1,0 +1,53 @@
+---
+import Caret from "@/assets/svg/caret-top.svg";
+---
+
+<button
+  type="button"
+  id="scroll-to-top"
+  title="Volver al inicio"
+  class="aspect-square rounded-md p-0 text-center opacity-0 fixed bottom-4 right-4 overflow-hidden cursor-pointer bg-teal-600"
+>
+  <Caret class="size-12" />
+</button>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const scrollToTopBtn = document.getElementById("scroll-to-top")!;
+
+    function scrollToTop() {
+      if (window.scrollY > 400 && window.scrollY > document.body.scrollTop) {
+        scrollToTopBtn.classList.add("scroll-down");
+        scrollToTopBtn.classList.remove("scroll-up");
+      } else {
+        scrollToTopBtn.classList.add("scroll-up");
+        scrollToTopBtn.classList.remove("scroll-down");
+      }
+    }
+
+    scrollToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.history.replaceState({}, document.title, "/");
+    });
+
+    window.addEventListener("scroll", scrollToTop);
+    document.addEventListener("click", scrollToTop);
+  });
+</script>
+
+<style>
+  #scroll-to-top {
+    transform: translateY(40px);
+    transition:
+      opacity 0.5s ease,
+      transform 0.75s ease;
+  }
+  #scroll-to-top.scroll-down {
+    opacity: 0.8;
+    transform: translateY(0);
+  }
+  #scroll-to-top.scroll-up {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+</style>
