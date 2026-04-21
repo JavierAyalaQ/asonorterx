@@ -3,122 +3,122 @@
     "friday_september_11": [
       {
         "id": "event_1",
-        "start": "12:00",
-        "end": "14:00",
-        "event_type": "speak",
+        "start": "12:00 p.m.",
+        "end": "2:00 p.m.",
+        "type": "speak",
         "title": "Taller Teórico Practico de estudios Imagenológico. Rx Tórax - Rx Óseo - Ecografía - Tac. “Lo que debemos saber”... para médicos, internos y estudiantes y técnicos.",
         "speakers": ["Dr. Oscar Parada", "Dr. Jimmy Prieto"]
       },
       {
         "id": "event_2",
-        "start": "12:00",
-        "end": "14:00",
-        "event_type": "speak",
+        "start": "12:00 p.m.",
+        "end": "2:00 p.m.",
+        "type": "speak",
         "title": "Inscripciones",
         "speakers": []
       },
       {
         "id": "event_3",
-        "start": "14:00",
-        "end": "14:10",
-        "event_type": "speak",
+        "start": "2:00 p.m.",
+        "end": "2:10 p.m.",
+        "type": "speak",
         "title": "Inauguración",
         "speakers": []
       },
       {
         "id": "event_4",
-        "start": "14:10",
-        "end": "14:30",
-        "event_type": "speak",
+        "start": "2:10 p.m.",
+        "end": "2:30 p.m.",
+        "type": "speak",
         "title": "Lesiones Hepáticas, Que ver, como interpretar, que reportar.",
         "speakers": ["Dr. Jesús Sanabria"]
       },
       {
         "id": "event_5",
-        "start": "14:30",
-        "end": "14:50",
-        "event_type": "speak",
+        "start": "2:30 p.m.",
+        "end": "2:50 p.m.",
+        "type": "speak",
         "title": "Ecografía nervios Periféricos. Miembro superior. Radial, cubital mediano.",
         "speakers": ["Dr. Miguel Vega Arango"]
       },
       {
         "id": "event_6",
-        "start": "14:50",
-        "end": "15:10",
-        "event_type": "speak",
+        "start": "2:50 p.m.",
+        "end": "3:10 p.m.",
+        "type": "speak",
         "title": "Ecografía de tobillo. Codo - muñeca. Lo que el Radiólogo debe saber.",
         "speakers": ["Dr. Sergio Andrés Galvis"]
       },
       {
         "id": "event_7",
-        "start": "15:10",
-        "end": "15:30",
-        "event_type": "speak",
+        "start": "3:10 p.m.",
+        "end": "3:30 p.m.",
+        "type": "speak",
         "title": "Inteligencia Artificial.",
         "speakers": ["Dr. Oswaldo Ramos"]
       },
       {
         "id": "event_8",
-        "start": "15:30",
-        "end": "15:50",
-        "event_type": "break",
-        "title": "Break",
+        "start": "3:30 p.m.",
+        "end": "3:50 p.m.",
+        "type": "break",
+        "title": "Break.",
         "speakers": []
       },
       {
         "id": "event_9",
-        "start": "15:50",
-        "end": "16:10",
-        "event_type": "speak",
+        "start": "3:50 p.m.",
+        "end": "4:10 p.m.",
+        "type": "speak",
         "title": "Ecografía Piso Pélvico. Ecografía de Nervios Periféricos. Miembros inferiores.",
         "speakers": ["Dra. Diana Rodríguez"]
       },
       {
         "id": "event_10",
-        "start": "16:10",
-        "end": "16:30",
-        "event_type": "speak",
+        "start": "4:10 p.m.",
+        "end": "4:30 p.m.",
+        "type": "speak",
         "title": "Ecografía de Nervios Periféricos. Miembros inferiores.",
         "speakers": ["Dr. Miguel Vega Arango"]
       },
       {
         "id": "event_11",
-        "start": "16:30",
-        "end": "16:50",
-        "event_type": "speak",
+        "start": "4:30 p.m.",
+        "end": "4:50 p.m.",
+        "type": "speak",
         "title": "Taller Practico ecografía de Tobillo. Codo y muñeca.",
         "speakers": ["Dr. Sergio Andrés Galvis"]
       },
       {
         "id": "event_12",
-        "start": "16:50",
-        "end": "17:10",
-        "event_type": "break",
+        "start": "4:50 p.m.",
+        "end": "5:10 p.m.",
+        "type": "break",
         "title": "Actualización equipos imagenológicos. Speaker. Patrocinios.",
         "speakers": []
       },
       {
         "id": "event_13",
-        "start": "17:10",
-        "end": "17:30",
-        "event_type": "speak",
+        "start": "5:10 p.m.",
+        "end": "5:30 p.m.",
+        "type": "speak",
         "title": "Taller Practico de Nervios periféricos",
         "speakers": ["Dr. Miguel Vega Arango"]
       },
       {
         "id": "event_14",
-        "start": "17:30",
-        "end": "17:50",
-        "event_type": "break",
+        "start": "5:30 p.m.",
+        "end": "5:50 p.m.",
+        "type": "break",
         "title": "Actualización equipos imagenológicos. Speaker. Patrocinios.",
         "speakers": []
       },
       {
         "id": "event_15",
-        "start": "18:00",
-        "end": "19:00",
-        "event_type": "break",
-        "title": "Actividad Social Cultural - Bienvenida - Brindis Integracion.",
+        "start": "6:00 p.m.",
+        "end": "7:00 p.m.",
+        "type": "break",
+        "title": "Actividad Social Cultural - Bienvenida - Brindis Integración.",
         "speakers": []
       }
     ]
@@ -127,89 +127,89 @@
     "saturday_september_12": [
       {
         "id": "event_1",
-        "start": "08:00",
-        "end": "08:20",
-        "event_type": "speak",
+        "start": "08:00 a.m.",
+        "end": "08:20 a.m.",
+        "type": "speak",
         "title": "Imagenología mas Inteligencia Artificial.",
         "speakers": []
       },
       {
         "id": "event_2",
-        "start": "08:20",
-        "end": "08:40",
-        "event_type": "speak",
+        "start": "08:20 a.m.",
+        "end": "08:40 a.m.",
+        "type": "speak",
         "title": "Mapeo facial - Dermatológico y estético. Y uñas.",
         "speakers": ["Dr. Daniel Noreña"]
       },
       {
         "id": "event_3",
-        "start": "08:40",
-        "end": "09:00",
-        "event_type": "speak",
+        "start": "08:40 a.m.",
+        "end": "09:00 a.m.",
+        "type": "speak",
         "title": "Ecografía Endometriosis.",
         "speakers": ["Dra. Diana Rodríguez"]
       },
       {
         "id": "event_4",
-        "start": "09:00",
-        "end": "09:20",
-        "event_type": "speak",
+        "start": "09:00 a.m.",
+        "end": "09:20 a.m.",
+        "type": "speak",
         "title": "Ecografía Muscular.",
         "speakers": ["Dr. Daniel Noreña"]
       },
       {
         "id": "event_5",
-        "start": "09:20",
-        "end": "09:40",
-        "event_type": "speak",
+        "start": "09:20 a.m.",
+        "end": "09:40 a.m.",
+        "type": "speak",
         "title": "Ecografía de Pene.",
         "speakers": []
       },
       {
         "id": "event_6",
-        "start": "09:40",
-        "end": "10:00",
-        "event_type": "break",
-        "title": "Break",
+        "start": "09:40 a.m.",
+        "end": "10:00 a.m.",
+        "type": "break",
+        "title": "Break.",
         "speakers": []
       },
       {
         "id": "event_7",
-        "start": "10:00",
-        "end": "10:20",
-        "event_type": "speak",
+        "start": "10:00 a.m.",
+        "end": "10:20 a.m.",
+        "type": "speak",
         "title": "Ecografía ocular.",
         "speakers": []
       },
       {
         "id": "event_8",
-        "start": "10:20",
-        "end": "10:40",
-        "event_type": "speak",
+        "start": "10:20 a.m.",
+        "end": "10:40 a.m.",
+        "type": "speak",
         "title": "Ecografía Mapeo Cervical.",
         "speakers": []
       },
       {
         "id": "event_9",
-        "start": "10:40",
-        "end": "11:10",
-        "event_type": "speak",
+        "start": "10:40 a.m.",
+        "end": "11:10 a.m.",
+        "type": "speak",
         "title": "Taller de Piel - musculo y uñas.",
         "speakers": ["Dr. Daniel Noreña"]
       },
       {
         "id": "event_10",
-        "start": "11:10",
-        "end": "11:20",
-        "event_type": "speak",
+        "start": "11:10 a.m.",
+        "end": "11:20 a.m.",
+        "type": "break",
         "title": "Patrocinios.",
         "speakers": []
       },
       {
         "id": "event_11",
-        "start": "11:20",
-        "end": "12:00",
-        "event_type": "speak",
+        "start": "11:20 a.m.",
+        "end": "12:00 p.m.",
+        "type": "speak",
         "title": "Taller. Inteligencia Artificial - casos clínicos.",
         "speakers": []
       }

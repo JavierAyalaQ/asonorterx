@@ -23,7 +23,7 @@ const predefinedClasses: { [key: string]: string } = {
 
 const predefinedColors: { [key: string]: string } = {
   primary: "text-teal-950",
-  secondary: "text-teal-800",
+  secondary: "text-teal-700",
   white: "text-teal-50",
   black: "text-teal-950",
   inherit: "text-inherit",
@@ -46,7 +46,7 @@ const classes = [
 ];
 ---
 
-<Tag class:list={classes} {...props} tabindex="0">
+<Tag class:list={classes} {...props}>
   <slot>
     {body && body}
   </slot>

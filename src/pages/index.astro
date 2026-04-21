@@ -8,22 +8,75 @@ import program from "@/assets/data/program.json";
 ---
 
 <Layout>
-  <div class="bg-gray-100">
+  <div class="bg-white">
     <Container
       title="XV Simposio Internacional Nortesantandereano de Radiología"
       titleAs="h1"
-      class:list="flex flex-col gap-4 prose bg-linear-to-r bg-clip-text text-transparent from-teal-900 to-blue-900"
+      class:list="flex flex-col gap-4 prose bg-linear-to-r bg-clip-text text-center text-transparent from-teal-900 to-blue-900"
     >
-      <div class="flex justify-center w-full -mt-4 md:-mt-8">
+      <div
+        class="flex flex-col items-center justify-center w-full gap-4 -mt-4 md:-mt-8"
+      >
         <div
-          class="bg-linear-to-r to-teal-900 from-blue-900 text-white text-center font-semibold px-6 py-1"
+          class="px-6 py-1 font-semibold text-center text-white bg-linear-to-r to-teal-900 from-blue-900 w-fit"
         >
           <span class:list={"font-serif tracking-wider text-lg md:text-xl"}>
             Estudios Imagenológicos Huérfanos
           </span>
         </div>
+        <div class="flex flex-col gap-12 mt-4 md:flex-row">
+          <div
+            class="flex flex-col items-center justify-center gap-2 text-center flex-3"
+          >
+            <span
+              class="font-serif text-xl text-blue-800 border-b-2 border-blue-800 md:text-2xl"
+            >
+              Hotel Casino Internacional
+              <br />
+              Cúcuta, Colombia
+            </span>
+            <span class="text-blue-800">11 y 12 de septiembre de 2026</span>
+          </div>
+          <div class="flex items-center justify-center gap-12 flex-2">
+            <div class="flex flex-col items-center justify-center text-center">
+              <Typography
+                as="span"
+                variant="p"
+                color="primary"
+                class="font-medium text-center">Invita</Typography
+              >
+              <img
+                src={`/logos/logo-asonorterx-fondo.png`}
+                alt="Logo de la Asociación Nortesantandereana de Radiología"
+                class="w-16 max-w-full md:w-20 aspect-square"
+              />
+            </div>
+            <div class="flex flex-col items-center justify-center text-center">
+              <Typography
+                as="span"
+                variant="p"
+                color="primary"
+                class="font-medium text-center">Avala</Typography
+              >
+              <img
+                src={`/logos/logo-acr-fondo.png`}
+                alt="Logo de la Asociación Nortesantandereana de Radiología"
+                class="w-16 max-w-full md:w-20 aspect-square"
+              />
+            </div>
+          </div>
+        </div>
       </div>
+    </Container>
+  </div>
 
+  <div class="bg-gray-100">
+    <Container
+      title="Presentación"
+      titleAs="h2"
+      titleVariant="h2"
+      class:list="flex flex-col gap-4 prose"
+    >
       <Typography as="p" variant="p" color="primary">
         La Asociación Nortesantandereana de Radiología se complace en anunciar
         la realización del XV Simposio Internacional Nortesantandereano de
@@ -35,7 +88,7 @@ import program from "@/assets/data/program.json";
         Este evento reunirá a destacados radiólogos, especialistas en
         imagenología y profesionales de la salud de todo el mundo para compartir
         conocimientos, avances tecnológicos y experiencias clínicas relacionadas
-        con los estudios imagenológicos huérfanos. El simposio ofrecerá una
+        con los Estudios Imagenológicos Huérfanos. El simposio ofrecerá una
         plataforma para la discusión de casos clínicos complejos, presentaciones
         magistrales, talleres prácticos.
       </Typography>
@@ -43,18 +96,21 @@ import program from "@/assets/data/program.json";
   </div>
 
   <div id="speakers" class="bg-white">
-    <Container title="Speakers" titleAs="h2" titleVariant="h2">
-      <div class="grid grid-cols-2 xl:grid-cols-3 gap-8">
+    <Container title="Conferencistas" titleAs="h2" titleVariant="h2">
+      <div class="grid grid-cols-2 gap-8 xl:grid-cols-3">
         {
           speakers.map((speaker) => (
             <div class="flex flex-col items-center gap-2 text-pretty">
-              <img src={`/speakers/${speaker.image}`} alt={speaker.name} />
+              <img
+                src={`/speakers/${speaker.image}`}
+                alt={speaker.name}
+                class="max-w-28"
+              />
               <Typography
-                as="a"
+                as="h3"
                 variant="strong"
                 color="secondary"
-                href={`/speaker/${speaker.url}`}
-                class="hover:underline font-semibold text-center"
+                class="font-semibold text-center transition-all cursor-pointer hover:underline"
               >
                 {speaker.name}
               </Typography>
@@ -70,50 +126,79 @@ import program from "@/assets/data/program.json";
 
   <div id="schedule" class="bg-gray-100">
     <Container title="Programación" titleAs="h2" titleVariant="h2">
-      <div>
-        {
-          (
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8">
-              {/* Viernes */}
-              <div>
-                <Typography as="h4" variant="h4" color="secondary">
-                  Viernes, 11 de septiembre
-                </Typography>
-                <div class="mt-4 space-y-2">
-                  {program[0].friday_september_11?.map((event) => (
-                    <div class="border-l-4 border-teal-700 pl-4">
-                      <Typography as="strong" variant="strong" color="primary">
-                        {event.start} - {event.end}
-                      </Typography>
-                      <Typography as="p" variant="small" color="primary">
-                        {event.title}
-                      </Typography>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              {/* Sábado */}
-              <div>
-                <Typography as="h4" variant="h4" color="secondary">
-                  Sábado, 12 de septiembre
-                </Typography>
-                <div class="mt-4 space-y-2">
-                  {program[1].saturday_september_12?.map((event) => (
-                    <div class="border-l-4 border-teal-700 pl-4">
-                      <Typography as="strong" variant="strong" color="primary">
-                        {event.start} - {event.end}
-                      </Typography>
-                      <Typography as="p" variant="small" color="primary">
-                        {event.title}
-                      </Typography>
-                    </div>
-                  ))}
-                </div>
+      {
+        (
+          <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-8">
+            {/* Viernes */}
+            <div>
+              <Typography as="h3" variant="h4" color="secondary">
+                Viernes, 11 de septiembre
+              </Typography>
+              <div class="mt-4 space-y-2">
+                {program[0].friday_september_11?.map((event) => (
+                  <div
+                    class:list={[
+                      "border-l-4 pl-4",
+                      event.type === "break"
+                        ? "border-blue-400"
+                        : "border-teal-700",
+                    ]}
+                  >
+                    <Typography as="strong" variant="strong" color="primary">
+                      {event.start} - {event.end}
+                    </Typography>
+                    <Typography as="p" variant="small" color="primary">
+                      {event.title}
+                    </Typography>
+                  </div>
+                ))}
               </div>
             </div>
-          )
-        }
-      </div>
+            {/* Sábado */}
+            <div>
+              <Typography as="h3" variant="h4" color="secondary">
+                Sábado, 12 de septiembre
+              </Typography>
+              <ul class="mt-4 space-y-2">
+                {program[1].saturday_september_12?.map((event) => (
+                  <li
+                    class:list={[
+                      "border-l-4 pl-4",
+                      event.type === "break"
+                        ? "border-blue-400"
+                        : "border-teal-700",
+                    ]}
+                  >
+                    <Typography as="strong" variant="strong" color="primary">
+                      {event.start} - {event.end}
+                    </Typography>
+                    <Typography as="p" variant="small" color="primary">
+                      {event.title}
+                    </Typography>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )
+      }
+    </Container>
+  </div>
+
+  <div class="bg-white">
+    <Container
+      title="Inscripciones"
+      titleAs="h2"
+      titleVariant="h2"
+      class:list="flex flex-col gap-4 prose"
+    >
+      <Typography as="p" variant="p" color="primary">
+        Inscríbete al evento realizando transferencia bancaria o consignación a
+        la cuenta de ahorros <strong
+          >Banco Davivienda 068800011212 ASOCIACION NORTESANTANDEREANA DE
+          RADIOLOGÍA NIT. 807000585-4</strong
+        > y envía tu comprobante de pago al número de contacto.
+      </Typography>
     </Container>
   </div>
 </Layout>
