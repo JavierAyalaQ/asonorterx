@@ -1,0 +1,44 @@
+[
+  {
+    "id": "inscription_1",
+    "category": "Internos y estudiantes de medicina",
+    "normal_price": "Sin costo",
+    "late_price": "Sin costo"
+  },
+  {
+    "id": "inscription_2",
+    "category": "Médicos Generales y Profesionales de la salud",
+    "normal_price": "50.000",
+    "late_price": "70.000"
+  },
+  {
+    "id": "inscription_3",
+    "category": "Radiólogos NO asociados",
+    "normal_price": "200.000",
+    "late_price": "250.000"
+  },
+  {
+    "id": "inscription_4",
+    "category": "Residentes NO asociados",
+    "normal_price": "50.000",
+    "late_price": "70.000"
+  },
+  {
+    "id": "inscription_5",
+    "category": "Radiólogos asociados a otras Zonales",
+    "normal_price": "100.000",
+    "late_price": "150.000"
+  },
+  {
+    "id": "inscription_6",
+    "category": "Otras especialidades",
+    "normal_price": "150.000",
+    "late_price": "150.000"
+  },
+  {
+    "id": "inscription_7",
+    "category": "Radiólogos y Residentes ASONORTERX",
+    "normal_price": "Sin costo",
+    "late_price": "Sin costo"
+  }
+]

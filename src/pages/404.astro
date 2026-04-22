@@ -1,0 +1,28 @@
+---
+import Container from "@/components/Container.astro";
+import Typography from "@/components/Typography.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout>
+  <Container
+    title="Página no encontrada"
+    titleAs="h1"
+    class:list="flex flex-col gap-4"
+  >
+    <Typography
+      as="p"
+      variant="p"
+      color="primary"
+      class="font-medium text-center text-lg md:text-xl"
+    >
+      Lo sentimos, la página que estás buscando no existe.
+    </Typography>
+    <a
+      href="/"
+      class="bg-linear-to-r to-teal-800 from-blue-800 text-teal-50 hover:brightness-110 transition-all px-4 py-2 rounded-md text-sm md:text-base font-medium w-fit mx-auto shadow-md hover:shadow-lg"
+    >
+      Volver a la página principal
+    </a>
+  </Container>
+</Layout>

@@ -5,6 +5,8 @@ import Layout from "@/layouts/Layout.astro";
 
 import speakers from "@/assets/data/speakers.json";
 import program from "@/assets/data/program.json";
+import inscriptions from "@/assets/data/inscriptions.json";
+import Table from "@/components/Table/Table.astro";
 ---
 
 <Layout>
@@ -24,18 +26,22 @@ import program from "@/assets/data/program.json";
             Estudios Imagenológicos Huérfanos
           </span>
         </div>
-        <div class="flex flex-col gap-12 mt-4 md:flex-row">
+        <div class="flex flex-col gap-8 md:gap-12 mt-4 md:flex-row">
           <div
             class="flex flex-col items-center justify-center gap-2 text-center flex-3"
           >
-            <span
+            <p
               class="font-serif text-xl text-blue-800 border-b-2 border-blue-800 md:text-2xl"
             >
               Hotel Casino Internacional
               <br />
               Cúcuta, Colombia
-            </span>
-            <span class="text-blue-800">11 y 12 de septiembre de 2026</span>
+            </p>
+            <p class="text-blue-800 text-md md:text-xl italic">
+              <span class="font-extrabold">11</span> y <span
+                class="font-extrabold">12</span
+              > de septiembre de <strong>2026</strong>
+            </p>
           </div>
           <div class="flex items-center justify-center gap-12 flex-2">
             <div class="flex flex-col items-center justify-center text-center">
@@ -97,10 +103,10 @@ import program from "@/assets/data/program.json";
 
   <div id="speakers" class="bg-white">
     <Container title="Conferencistas" titleAs="h2" titleVariant="h2">
-      <div class="grid grid-cols-2 gap-8 xl:grid-cols-3">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         {
           speakers.map((speaker) => (
-            <div class="flex flex-col items-center gap-2 text-pretty">
+            <div class="flex flex-col items-center gap-2 text-center">
               <img
                 src={`/speakers/${speaker.image}`}
                 alt={speaker.name}
@@ -114,8 +120,22 @@ import program from "@/assets/data/program.json";
               >
                 {speaker.name}
               </Typography>
-              <Typography as="p" variant="small" color="primary">
+              <Typography
+                as="p"
+                variant="p"
+                color="primary"
+                class:list="text-pretty"
+              >
                 {speaker.description}
+              </Typography>
+              <Typography
+                as="p"
+                variant="p"
+                color="primary"
+                class:list="italic font-bold text-sm"
+              >
+                {speaker.city ? `${speaker.city}, ` : ""}
+                {speaker.country}
               </Typography>
             </div>
           ))
@@ -192,12 +212,58 @@ import program from "@/assets/data/program.json";
       titleVariant="h2"
       class:list="flex flex-col gap-4 prose"
     >
+      <Table
+        tone="light"
+        color="neutral"
+        columns={[
+          "Categoría",
+          "Precio hasta el 1 de Septiembre",
+          "Precio después del 1 de Septiembre",
+        ]}
+        data={inscriptions.map((inscription) => [
+          inscription.category,
+          inscription.normal_price,
+          inscription.late_price,
+        ])}
+      />
+
       <Typography as="p" variant="p" color="primary">
         Inscríbete al evento realizando transferencia bancaria o consignación a
         la cuenta de ahorros <strong
-          >Banco Davivienda 068800011212 ASOCIACION NORTESANTANDEREANA DE
+          >Banco Davivienda 068800011212 ASOCIACIóN NORTESANTANDEREANA DE
           RADIOLOGÍA NIT. 807000585-4</strong
         > y envía tu comprobante de pago al número de contacto.
+      </Typography>
+    </Container>
+  </div>
+
+  <div class="bg-gray-100">
+    <Container
+      title="Ciudad Sede"
+      titleAs="h2"
+      titleVariant="h2"
+      class:list="flex flex-col gap-4 prose"
+    >
+      <Typography as="p" variant="p" color="primary">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis sapiente
+        dolor fugiat perferendis tempore. Minima, quas quos tempora aspernatur
+        harum ad doloribus nihil sunt maiores, odio magni, nesciunt enim
+        asperiores?
+      </Typography>
+    </Container>
+  </div>
+
+  <div class="bg-white">
+    <Container
+      title="Patrocinadores"
+      titleAs="h2"
+      titleVariant="h2"
+      class:list="flex flex-col gap-4 prose"
+    >
+      <Typography as="p" variant="p" color="primary">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco
       </Typography>
     </Container>
   </div>

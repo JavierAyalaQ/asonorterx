@@ -1,24 +1,89 @@
 ---
-interface Data {
-  log_id: number;
-  log_message: string;
-  log_timestamp: string;
-  log_modified_id?: number;
-  href?: string;
-}
-
 interface Props {
   columns: string[];
-  data: Data[];
+  data: string[][];
+  tone?: "light" | "dark";
+  color?: "neutral" | "teal" | "blue" | "gray";
 }
 
-const { columns, data } = Astro.props;
+const colorVariants = {
+  neutral: {
+    head: {
+      dark: "bg-neutral-800 text-neutral-100",
+      light: "bg-neutral-300 text-neutral-900",
+    },
+    divider: {
+      dark: "divide-neutral-800",
+      light: "divide-neutral-300",
+    },
+    row: {
+      dark: "bg-neutral-700 text-neutral-200",
+      light: "bg-neutral-200 text-neutral-800",
+    },
+  },
+  gray: {
+    head: {
+      dark: "bg-gray-900 text-gray-100",
+      light: "bg-gray-300 text-gray-900",
+    },
+    divider: {
+      dark: "divide-gray-700",
+      light: "divide-gray-300",
+    },
+    row: {
+      dark: "bg-gray-800 text-gray-300",
+      light: "bg-gray-200 text-gray-800",
+    },
+  },
+  teal: {
+    head: {
+      dark: "bg-teal-950 text-teal-50",
+      light: "bg-teal-300 text-teal-950",
+    },
+    divider: {
+      dark: "divide-teal-700",
+      light: "divide-teal-300",
+    },
+    row: {
+      dark: "bg-teal-900 text-teal-50",
+      light: "bg-teal-100 text-teal-900",
+    },
+  },
+  blue: {
+    head: {
+      dark: "bg-blue-950 text-blue-50",
+      light: "bg-blue-300 text-blue-950",
+    },
+    divider: {
+      dark: "divide-blue-950",
+      light: "divide-blue-300",
+    },
+    row: {
+      dark: "bg-blue-900 text-blue-50",
+      light: "bg-blue-100 text-blue-900",
+    },
+  },
+};
+
+const { columns, data, tone = "light", color = "neutral" } = Astro.props;
 ---
 
 <div class="relative overflow-x-auto rounded">
-  <table class="w-full text-sm text-left text-gray-300 bg-gray-500/50">
+  <table
+    class:list={[
+      "w-full text-sm text-left",
+      tone === "dark"
+        ? colorVariants[color].head.dark
+        : colorVariants[color].head.light,
+    ]}
+  >
     <thead
-      class="text-xs font-medium tracking-wider text-gray-200 uppercase bg-gray-700"
+      class:list={[
+        "text-xs font-medium tracking-wider uppercase",
+        tone === "dark"
+          ? colorVariants[color].head.dark
+          : colorVariants[color].head.light,
+      ]}
     >
       <tr>
         {
@@ -31,44 +96,30 @@ const { columns, data } = Astro.props;
       </tr>
     </thead>
 
-    <tbody>
+    <tbody
+      class:list={[
+        "divide-y",
+        tone === "dark"
+          ? colorVariants[color].divider.dark
+          : colorVariants[color].divider.light,
+      ]}
+    >
       {
         data.map((item) => (
-          <tr class="bg-gray-800 border-b border-gray-700">
-            <th
-              scope="row"
-              class="px-6 py-4 font-bold text-gray-50 whitespace-nowrap"
-            >
-              {item.log_id}
+          <tr
+            class:list={[
+              "",
+              tone === "dark"
+                ? colorVariants[color].row.dark
+                : colorVariants[color].row.light,
+            ]}
+          >
+            <th scope="row" class="px-6 py-4 font-bold whitespace-nowrap">
+              {item[0]}
             </th>
-            <td class="px-6 py-4">{item.log_message}</td>
-            <td class="px-6 py-4">{item.log_timestamp}</td>
-            {item.log_modified_id && (
-              <td class="px-6 py-4">
-                <a
-                  href={`/toner/${item.href}`}
-                  class="flex flex-row items-center gap-2 transition-colors cursor-pointer hover:text-teal-700"
-                >
-                  {item.log_modified_id}
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="size-4"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M9 15l6 -6" />
-                    <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
-                    <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
-                  </svg>
-                </a>
-              </td>
-            )}
+            {item.slice(1).map((value) => (
+              <td class="px-6 py-4">{value}</td>
+            ))}
           </tr>
         ))
       }

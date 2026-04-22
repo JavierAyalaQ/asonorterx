@@ -1,6 +1,6 @@
 [
   {
-    "id": "speaker-1",
+    "id": "speaker_1",
     "url": "dr-oswaldo-ramos",
     "name": "Dr. Oswaldo Ramos",
     "description": "Especialista Diagnóstico por imagen, Expresidente Asociación Radiológica de Venezuela, expresidente y profesor del CIR, Docente, Direccion de unidades. Especialista Diagnóstico por imagen, imágenes IA.",
@@ -9,7 +9,7 @@
     "image": "speaker-1.png"
   },
   {
-    "id": "speaker-2",
+    "id": "speaker_2",
     "url": "dr-daniel-noreña",
     "name": "Dr. Daniel Noreña Rengifo",
     "description": "Especialista Diagnóstico por imagen, Fellow Musculoesquelético, experto en Ecografía Dermatológica y Estética. Dermasonido Medellín, Colombia.",
@@ -18,7 +18,7 @@
     "image": "speaker-2.png"
   },
   {
-    "id": "speaker-3",
+    "id": "speaker_3",
     "url": "dra-diana-rodriguez",
     "name": "Dra. Diana Milena Rodríguez Merchán ",
     "description": "Obstetra y ginecóloga, Universidad Nacional de Colombia. Ginecología urológica, Universidad Nacional de Colombia. Ecografista de Piso pélvico, Universidad de Chile. Coordinadora Unidad de Uroginecología, Sura Medellín. Coordinadora Unidad de Piso pélvico, Clínica del Prado. Docente Uroginecología, Universidad Nacional de Colombia.",
@@ -27,7 +27,7 @@
     "image": "speaker-3.png"
   },
   {
-    "id": "speaker-4",
+    "id": "speaker_4",
     "url": "dr-miguel-vega-arango",
     "name": "Dr. Miguel Vega Arango",
     "description": "Especialista Diagnóstico por imagen. Fellowship Musculoesquelético, McGill University, Montreal, Canadá. Docente Universidad Pontificia Bolivariana, Medellín, Colombia.",
@@ -36,7 +36,7 @@
     "image": "speaker-4.png"
   },
   {
-    "id": "speaker-5",
+    "id": "speaker_5",
     "url": "dr-jesus-sanabria",
     "name": "Dr. Jesús Sanabria",
     "description": "Especialista Diagnóstico por imagen. Subespecialidad en imagen corporal, Hospital Italiano, Buenos Aires, Argentina",
@@ -45,7 +45,7 @@
     "image": "speaker-5.png"
   },
   {
-    "id": "speaker-6",
+    "id": "speaker_6",
     "url": "dr-sergio-andres-galvis",
     "name": "Dr. Sergio Andrés Galvis",
     "description": "Especialista diagnóstico por imágenes con fellow en músculo esqueletico, Instituto Rossi, Buenos Aires, Argentina",
