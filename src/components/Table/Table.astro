@@ -41,14 +41,14 @@ const {
   <table
     class:list={[
       "text-xs md:text-md text-left",
-      colorVariants && colorVariants[color].head,
+      colorVariants[color].head,
       mobileCollapse === "scroll" ? "w-full" : "w-fit sm:w-full",
     ]}
   >
     <thead
       class:list={[
         "font-medium tracking-wide uppercase",
-        colorVariants && colorVariants[color].head,
+        colorVariants[color].head,
       ]}
     >
       <tr>
@@ -62,12 +62,10 @@ const {
       </tr>
     </thead>
 
-    <tbody
-      class:list={["divide-y", colorVariants && colorVariants[color].divider]}
-    >
+    <tbody class:list={["divide-y", colorVariants[color].divider]}>
       {
         data.map((item) => (
-          <tr class:list={["", colorVariants && colorVariants[color].row]}>
+          <tr class:list={["", colorVariants[color].row]}>
             <th
               scope="row"
               class:list={[
