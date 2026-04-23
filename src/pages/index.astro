@@ -26,7 +26,7 @@ import Table from "@/components/Table/Table.astro";
             Estudios Imagenológicos Huérfanos
           </span>
         </div>
-        <div class="flex flex-col gap-8 md:gap-12 mt-4 md:flex-row">
+        <div class="flex flex-col gap-8 mt-4 md:gap-12 md:flex-row">
           <div
             class="flex flex-col items-center justify-center gap-2 text-center flex-3"
           >
@@ -37,9 +37,9 @@ import Table from "@/components/Table/Table.astro";
               <br />
               Cúcuta, Colombia
             </p>
-            <p class="text-blue-800 text-md md:text-xl italic">
-              <span class="font-extrabold">11</span> y <span
-                class="font-extrabold">12</span
+            <p class="italic text-blue-800 text-md md:text-xl">
+              <span class="font-black">11</span> y <span class="font-black"
+                >12</span
               > de septiembre de <strong>2026</strong>
             </p>
           </div>
@@ -103,7 +103,7 @@ import Table from "@/components/Table/Table.astro";
 
   <div id="speakers" class="bg-white">
     <Container title="Conferencistas" titleAs="h2" titleVariant="h2">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
         {
           speakers.map((speaker) => (
             <div class="flex flex-col items-center gap-2 text-center">
@@ -205,7 +205,7 @@ import Table from "@/components/Table/Table.astro";
     </Container>
   </div>
 
-  <div class="bg-white">
+  <div id="inscriptions" class="bg-white">
     <Container
       title="Inscripciones"
       titleAs="h2"
@@ -213,8 +213,8 @@ import Table from "@/components/Table/Table.astro";
       class:list="flex flex-col gap-4 prose"
     >
       <Table
-        tone="light"
-        color="neutral"
+        color="gray"
+        mobileCollapse="fit"
         columns={[
           "Categoría",
           "Precio hasta el 1 de Septiembre",
@@ -237,7 +237,7 @@ import Table from "@/components/Table/Table.astro";
     </Container>
   </div>
 
-  <div class="bg-gray-100">
+  <div id="" class="bg-gray-100">
     <Container
       title="Ciudad Sede"
       titleAs="h2"
@@ -253,7 +253,7 @@ import Table from "@/components/Table/Table.astro";
     </Container>
   </div>
 
-  <div class="bg-white">
+  <div id="sponsors" class="bg-white">
     <Container
       title="Patrocinadores"
       titleAs="h2"

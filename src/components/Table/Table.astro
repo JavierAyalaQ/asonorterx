@@ -2,93 +2,59 @@
 interface Props {
   columns: string[];
   data: string[][];
-  tone?: "light" | "dark";
   color?: "neutral" | "teal" | "blue" | "gray";
+  mobileCollapse?: "scroll" | "fit";
 }
 
 const colorVariants = {
   neutral: {
-    head: {
-      dark: "bg-neutral-800 text-neutral-100",
-      light: "bg-neutral-300 text-neutral-900",
-    },
-    divider: {
-      dark: "divide-neutral-800",
-      light: "divide-neutral-300",
-    },
-    row: {
-      dark: "bg-neutral-700 text-neutral-200",
-      light: "bg-neutral-200 text-neutral-800",
-    },
+    head: "bg-neutral-800 text-neutral-100 dark:bg-neutral-300 dark:text-neutral-900",
+    divider: "divide-neutral-800 dark:divide-neutral-400",
+    row: "bg-neutral-700 text-neutral-200 dark:bg-neutral-200 dark:text-neutral-800",
   },
   gray: {
-    head: {
-      dark: "bg-gray-900 text-gray-100",
-      light: "bg-gray-300 text-gray-900",
-    },
-    divider: {
-      dark: "divide-gray-700",
-      light: "divide-gray-300",
-    },
-    row: {
-      dark: "bg-gray-800 text-gray-300",
-      light: "bg-gray-200 text-gray-800",
-    },
+    head: "bg-gray-900 text-gray-100 dark:bg-gray-300 dark:text-gray-900",
+    divider: "divide-gray-700 dark:divide-gray-300",
+    row: "bg-gray-800 text-gray-300 dark:bg-gray-200 dark:text-gray-800",
   },
   teal: {
-    head: {
-      dark: "bg-teal-950 text-teal-50",
-      light: "bg-teal-300 text-teal-950",
-    },
-    divider: {
-      dark: "divide-teal-700",
-      light: "divide-teal-300",
-    },
-    row: {
-      dark: "bg-teal-900 text-teal-50",
-      light: "bg-teal-100 text-teal-900",
-    },
+    head: "bg-teal-950 text-teal-50 dark:bg-teal-300 dark:text-teal-950",
+    divider: "divide-teal-700 dark:divide-teal-300",
+    row: "bg-teal-900 text-teal-50 dark:bg-teal-100 dark:text-teal-900",
   },
   blue: {
-    head: {
-      dark: "bg-blue-950 text-blue-50",
-      light: "bg-blue-300 text-blue-950",
-    },
-    divider: {
-      dark: "divide-blue-950",
-      light: "divide-blue-300",
-    },
-    row: {
-      dark: "bg-blue-900 text-blue-50",
-      light: "bg-blue-100 text-blue-900",
-    },
+    head: "bg-blue-950 text-blue-50 dark:bg-blue-300 dark:text-blue-950",
+    divider: "divide-blue-950 dark:divide-blue-300",
+    row: "bg-blue-900 text-blue-50 dark:bg-blue-100 dark:text-blue-900",
   },
 };
 
-const { columns, data, tone = "light", color = "neutral" } = Astro.props;
+const {
+  columns,
+  data,
+  color = "neutral",
+  mobileCollapse = "fit",
+} = Astro.props;
 ---
 
 <div class="relative overflow-x-auto rounded">
   <table
     class:list={[
-      "w-full text-sm text-left",
-      tone === "dark"
-        ? colorVariants[color].head.dark
-        : colorVariants[color].head.light,
+      "text-xs md:text-md text-left",
+      colorVariants && colorVariants[color].head,
+      mobileCollapse === "scroll" ? "w-full" : "w-fit sm:w-full",
     ]}
   >
     <thead
       class:list={[
-        "text-xs font-medium tracking-wider uppercase",
-        tone === "dark"
-          ? colorVariants[color].head.dark
-          : colorVariants[color].head.light,
+        "font-medium tracking-wide uppercase",
+        colorVariants && colorVariants[color].head,
       ]}
     >
       <tr>
         {
           columns.map((column) => (
-            <th scope="col" class="px-6 py-3">
+            <th scope="col" class="p-2 md:px-6 md:py-3">
               {column}
             </th>
           ))
@@ -97,28 +63,24 @@ const { columns, data, tone = "light", color = "neutral" } = Astro.props;
     </thead>
 
     <tbody
-      class:list={[
-        "divide-y",
-        tone === "dark"
-          ? colorVariants[color].divider.dark
-          : colorVariants[color].divider.light,
-      ]}
+      class:list={["divide-y", colorVariants && colorVariants[color].divider]}
     >
       {
         data.map((item) => (
-          <tr
-            class:list={[
-              "",
-              tone === "dark"
-                ? colorVariants[color].row.dark
-                : colorVariants[color].row.light,
-            ]}
-          >
-            <th scope="row" class="px-6 py-4 font-bold whitespace-nowrap">
+          <tr class:list={["", colorVariants && colorVariants[color].row]}>
+            <th
+              scope="row"
+              class:list={[
+                "p-2 md:px-6 md:py-4 font-bold",
+                mobileCollapse === "scroll"
+                  ? "w-full  whitespace-nowrap"
+                  : "w-fit",
+              ]}
+            >
               {item[0]}
             </th>
             {item.slice(1).map((value) => (
-              <td class="px-6 py-4">{value}</td>
+              <td class="p-2 md:px-6 md:py-4">{value}</td>
             ))}
           </tr>
         ))
