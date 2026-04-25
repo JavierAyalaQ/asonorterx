@@ -17,15 +17,15 @@ import Menu from "@/assets/svg/menu.svg";
       </a>
       <button
         id="menu-toggle"
-        class="z-20 p-2 cursor-pointer md:hidden size-12 hover:text-teal-700"
-        ><Menu /></button
+        class="z-20 p-2 transition-colors bg-teal-500 rounded-full cursor-pointer hover:bg-teal-600 md:hidden size-12 hover:text-teal-700"
+        ><Menu id="menu-icon" /></button
       >
       <ul
         id="menu"
         data-menu-state="closed"
         class:list={[
           "flex flex-col fixed right-0 top-0 w-[50%] gap-4 p-4 text-xs font-semibold text-right bg-teal-700 opacity-0 hover z-10 h-dvh justify-center flex-0 translate-x-full",
-          "md:flex md:flex-row md:w-full md:translate-x-0 md:h-auto md:items-center md:justify-end md:text-sm md:gap-6 md:opacity-100 md:static",
+          "md:flex md:flex-row md:w-full md:h-auto md:inset-0 md:items-center md:justify-end md:text-sm md:gap-6 md:opacity-100 md:static md:transform-none md:translate-x-0!",
         ]}
       >
         <li><a href="#speakers" class="hover:underline">Conferencistas</a></li>
@@ -72,15 +72,13 @@ import Menu from "@/assets/svg/menu.svg";
         }
       });
     }, 200);
-  });
 
-  document.addEventListener("resize", (e) => {
-    if (window.innerWidth < 768) {
-      document.getElementById("menu")!.classList.remove("open-menu");
-      document.getElementById("menu")!.classList.add("close-menu");
-      document
-        .getElementById("menu")!
-        .setAttribute("data-menu-state", "closed");
-    }
+    window.addEventListener("resize", (e) => {
+      if (window.innerWidth >= 768) {
+        menu!.classList.remove("open-menu");
+        menu!.classList.remove("close-menu");
+        menu!.setAttribute("data-menu-state", "closed");
+      }
+    });
   });
 </script>
