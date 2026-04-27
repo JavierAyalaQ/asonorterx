@@ -1,5 +1,12 @@
 ---
 import Menu from "@/assets/svg/menu.svg";
+
+const routes = [
+  { name: "Conferencistas", href: "#speakers" },
+  { name: "Programación", href: "#schedule" },
+  { name: "Inscripciones", href: "#inscriptions" },
+  { name: "Patrocinadores", href: "#sponsors" },
+];
 ---
 
 <header class="sticky top-0 z-50 shadow-xl">
@@ -28,12 +35,15 @@ import Menu from "@/assets/svg/menu.svg";
           "md:flex md:flex-row md:w-full md:h-auto md:inset-0 md:items-center md:justify-end md:text-sm md:gap-6 md:opacity-100 md:static md:transform-none md:translate-x-0!",
         ]}
       >
-        <li><a href="#speakers" class="hover:underline">Conferencistas</a></li>
-        <li><a href="#schedule" class="hover:underline">Programación</a></li>
-        <li>
-          <a href="#inscriptions" class="hover:underline">Inscripciones</a>
-        </li>
-        <li><a href="#sponsors" class="hover:underline">Patrocinadores</a></li>
+        {
+          routes.map((route) => (
+            <li>
+              <a href={route.href} class="hover:underline">
+                {route.name}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </nav>
   </div>

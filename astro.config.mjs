@@ -5,8 +5,6 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://asonorterx.netlify.app",
-
   vite: {
     plugins: [tailwindcss()],
   },
@@ -23,4 +21,7 @@ export default defineConfig({
       provider: fontProviders.fontsource(),
     },
   ],
+
+  site: "https://asonorterx.netlify.app",
+  output: "static",
 });

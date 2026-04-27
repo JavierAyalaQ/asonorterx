@@ -5,27 +5,27 @@ import { Font } from "astro:assets";
 import Header from "@/components/Layout/Header.astro";
 import Footer from "@/components/Layout/Footer.astro";
 import BackToTop from "@/components/BackToTop.astro";
+import SEO from "@/components/Layout/SEO.astro";
 
 interface Props {
   title?: string;
   description?: string;
+  url?: string;
 }
+
 const {
   title = "XV Simposio Internacional Nortesantandereano de Radiología",
   description = "Programación e información adicional del XV Simposio Internacional Nortesantandereano de Radiología - Estudios IMagenológicos Huérfanos, celebrado los días 11 y 12 de septiembre de 2026, en el Hotel Casino Internacional, Cúcuta, Colombia.",
+  url = "https://asonorterx.netlify.app/",
 } = Astro.props;
 ---
 
 <html lang="es">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
+    <SEO title={title} description={description} url={url} />
 
     <Font cssVariable="--font-inter" preload />
     <Font cssVariable="--font-dm-serif-display" preload />
-    <title>{title}</title>
-    <meta name="description" content={description} />
   </head>
   <body class="overflow-x-hidden bg-gray-100 text-teal-950">
     <Header />
