@@ -6,23 +6,23 @@
         "start": "12:00 p.m.",
         "end": "2:00 p.m.",
         "type": "speak",
-        "title": "Taller Teórico Practico de estudios Imagenológico. Rx Tórax - Rx Óseo - Ecografía - Tac. “Lo que debemos saber”... para médicos, internos y estudiantes y técnicos.",
+        "title": "Taller Teórico Práctico de Estudios Imagenológicos. Rx Tórax - Rx Óseo - Ecografía - Tac. “Lo que debemos saber”… para médicos, internos y estudiantes y técnicos.",
         "speakers": ["Dr. Oscar Parada", "Dr. Jimmy Prieto"]
       },
       {
         "id": "event_2",
         "start": "12:00 p.m.",
         "end": "2:00 p.m.",
-        "type": "speak",
-        "title": "Inscripciones",
+        "type": "break",
+        "title": "Inscripciones.",
         "speakers": []
       },
       {
         "id": "event_3",
         "start": "2:00 p.m.",
         "end": "2:10 p.m.",
-        "type": "speak",
-        "title": "Inauguración",
+        "type": "break",
+        "title": "Inauguración.",
         "speakers": []
       },
       {
@@ -30,7 +30,7 @@
         "start": "2:10 p.m.",
         "end": "2:30 p.m.",
         "type": "speak",
-        "title": "Lesiones Hepáticas, Que ver, como interpretar, que reportar.",
+        "title": "Lesiones Hepáticas. Qué ver, cómo interpretar, qué reportar.",
         "speakers": ["Dr. Jesús Sanabria"]
       },
       {
@@ -38,7 +38,7 @@
         "start": "2:30 p.m.",
         "end": "2:50 p.m.",
         "type": "speak",
-        "title": "Ecografía nervios Periféricos. Miembro superior. Radial, cubital mediano.",
+        "title": "Ecografía nervios Periféricos. Miembro superior: Radial, cubital, mediano.",
         "speakers": ["Dr. Miguel Vega Arango"]
       },
       {
@@ -54,7 +54,7 @@
         "start": "3:10 p.m.",
         "end": "3:30 p.m.",
         "type": "speak",
-        "title": "Inteligencia Artificial.",
+        "title": "Inteligencia Artificial en Diagnostico por imágenes: del algoritmo a la práctica clínica.",
         "speakers": ["Dr. Oswaldo Ramos"]
       },
       {
@@ -70,7 +70,7 @@
         "start": "3:50 p.m.",
         "end": "4:10 p.m.",
         "type": "speak",
-        "title": "Ecografía Piso Pélvico. Ecografía de Nervios Periféricos. Miembros inferiores.",
+        "title": "Ecografía Piso Pélvico. Lo que el radiólogo debe contar.",
         "speakers": ["Dra. Diana Rodríguez"]
       },
       {
@@ -86,36 +86,44 @@
         "start": "4:30 p.m.",
         "end": "4:50 p.m.",
         "type": "speak",
-        "title": "Taller Practico ecografía de Tobillo. Codo y muñeca.",
-        "speakers": ["Dr. Sergio Andrés Galvis"]
+        "title": "Patologías más frecuentes del Piso pélvico. Diagnóstico.",
+        "speakers": ["Dra. Diana Rodríguez"]
       },
       {
         "id": "event_12",
         "start": "4:50 p.m.",
         "end": "5:10 p.m.",
-        "type": "break",
-        "title": "Actualización equipos imagenológicos. Speaker. Patrocinios.",
-        "speakers": []
+        "type": "speak",
+        "title": "Impacto de IA: Mama y Tiroides. Avances y aplicaciones en la interpretación.",
+        "speakers": ["Dr. Oswaldo Ramos"]
       },
       {
         "id": "event_13",
         "start": "5:10 p.m.",
         "end": "5:30 p.m.",
         "type": "speak",
-        "title": "Taller Practico de Nervios periféricos",
-        "speakers": ["Dr. Miguel Vega Arango"]
+        "title": "Taller Practico, Taller de IA. Aplicaciones.",
+        "speakers": ["Dr. Oswaldo Ramos"]
       },
       {
         "id": "event_14",
         "start": "5:30 p.m.",
         "end": "5:50 p.m.",
+        "type": "speak",
+        "title": "Taller Practico de Nervios periféricos.",
+        "speakers": ["Dr. Miguel Vega Arango"]
+      },
+      {
+        "id": "event_15",
+        "start": "5:50 p.m.",
+        "end": "6:10 p.m.",
         "type": "break",
         "title": "Actualización equipos imagenológicos. Speaker. Patrocinios.",
         "speakers": []
       },
       {
-        "id": "event_15",
-        "start": "6:00 p.m.",
+        "id": "event_16",
+        "start": "6:10 p.m.",
         "end": "7:00 p.m.",
         "type": "break",
         "title": "Actividad Social Cultural - Bienvenida - Brindis Integración.",
@@ -130,7 +138,7 @@
         "start": "08:00 a.m.",
         "end": "08:20 a.m.",
         "type": "speak",
-        "title": "Imagenología mas Inteligencia Artificial.",
+        "title": "Imagenología en Patología Respiratoria. ¿Cuál es la técnica más apropiada?",
         "speakers": []
       },
       {
@@ -138,7 +146,7 @@
         "start": "08:20 a.m.",
         "end": "08:40 a.m.",
         "type": "speak",
-        "title": "Mapeo facial - Dermatológico y estético. Y uñas.",
+        "title": "Mapeo facial: dermatológico y estético. Y uñas.",
         "speakers": ["Dr. Daniel Noreña"]
       },
       {
@@ -178,8 +186,8 @@
         "start": "10:00 a.m.",
         "end": "10:20 a.m.",
         "type": "speak",
-        "title": "Ecografía ocular.",
-        "speakers": []
+        "title": "Hígado: Lesiones Focales. MASLD, cirrosis.",
+        "speakers": ["Dr. Oswaldo Ramos"]
       },
       {
         "id": "event_8",
@@ -194,7 +202,7 @@
         "start": "10:40 a.m.",
         "end": "11:10 a.m.",
         "type": "speak",
-        "title": "Taller de Piel - musculo y uñas.",
+        "title": "Taller de Piel: músculo y uñas.",
         "speakers": ["Dr. Daniel Noreña"]
       },
       {
@@ -210,7 +218,7 @@
         "start": "11:20 a.m.",
         "end": "12:00 p.m.",
         "type": "speak",
-        "title": "Taller. Inteligencia Artificial - casos clínicos.",
+        "title": "Taller Inteligencia Artificial, casos clínicos.",
         "speakers": []
       }
     ]

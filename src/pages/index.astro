@@ -130,9 +130,9 @@ import Table from "@/components/Table/Table.astro";
               </Typography>
               <Typography
                 as="p"
-                variant="p"
-                color="primary"
-                class:list="italic font-bold text-sm"
+                variant="small"
+                weight={"bold"}
+                class:list="italic"
               >
                 {speaker.city ? `${speaker.city}, ` : ""}
                 {speaker.country}
@@ -167,9 +167,21 @@ import Table from "@/components/Table/Table.astro";
                     <Typography as="strong" variant="strong" color="primary">
                       {event.start} - {event.end}
                     </Typography>
-                    <Typography as="p" variant="small" color="primary">
+                    <Typography as="p" variant="p" color="primary">
                       {event.title}
                     </Typography>
+                    {event.speakers && (
+                      <Typography
+                        as="p"
+                        variant="small"
+                        weight="bold"
+                        color="primary"
+                      >
+                        {event.speakers.length > 1
+                          ? event.speakers.join(" y ")
+                          : event.speakers}
+                      </Typography>
+                    )}
                   </div>
                 ))}
               </div>
@@ -192,9 +204,21 @@ import Table from "@/components/Table/Table.astro";
                     <Typography as="strong" variant="strong" color="primary">
                       {event.start} - {event.end}
                     </Typography>
-                    <Typography as="p" variant="small" color="primary">
+                    <Typography as="p" variant="p" color="primary">
                       {event.title}
                     </Typography>
+                    {event.speakers && (
+                      <Typography
+                        as="p"
+                        variant="small"
+                        weight="bold"
+                        color="primary"
+                      >
+                        {event.speakers.length > 1
+                          ? event.speakers.join(" y ")
+                          : event.speakers}
+                      </Typography>
+                    )}
                   </li>
                 ))}
               </ul>

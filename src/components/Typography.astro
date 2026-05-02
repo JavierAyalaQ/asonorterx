@@ -6,6 +6,7 @@ type Props<Tag extends HTMLTag> = Polymorphic<{
   variant?: keyof typeof predefinedClasses;
   color?: keyof typeof predefinedColors;
   body?: string;
+  weight?: keyof typeof predefinedWeights;
 }>;
 
 const predefinedClasses: { [key: string]: string } = {
@@ -15,8 +16,9 @@ const predefinedClasses: { [key: string]: string } = {
   h4: "text-lg sm:text-xl md:text-2xl font-medium",
   h5: "text-base sm:text-xl font-medium",
   p: "text-base font-regular",
-  big: "text-xl font-medium",
-  small: "text-sm font-medium",
+  big: "text-xl",
+  small: "text-sm",
+  smaller: "text-xs",
   strong: "text-base font-bold",
   custom: "",
 };
@@ -30,10 +32,23 @@ const predefinedColors: { [key: string]: string } = {
   custom: "",
 };
 
+const predefinedWeights: { [key: string]: string } = {
+  thin: "font-thin",
+  extralight: "font-extralight",
+  light: "font-light",
+  normal: "font-normal",
+  medium: "font-medium",
+  semibold: "font-semibold",
+  bold: "font-bold",
+  extrabold: "font-extrabold",
+  black: "font-black",
+};
+
 const {
   as: Tag = "p",
   variant = "p",
   color = "inherit",
+  weight,
   body,
   class: className,
   ...props
@@ -42,6 +57,7 @@ const {
 const classes = [
   predefinedClasses[variant as keyof typeof predefinedClasses],
   predefinedColors[color as keyof typeof predefinedColors],
+  predefinedWeights[weight as keyof typeof predefinedWeights],
   className,
 ];
 ---

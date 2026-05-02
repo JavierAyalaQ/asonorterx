@@ -12,7 +12,7 @@
     "id": "speaker_2",
     "url": "dr-daniel-noreña",
     "name": "Dr. Daniel Noreña Rengifo",
-    "description": "Especialista Diagnóstico por imagen, Fellow Musculoesquelético, experto en Ecografía Dermatológica y Estética. Dermasonido Medellín, Colombia.",
+    "description": "Especialista Diagnóstico por imagen. Fellow Musculoesquelético, experto en Ecografía Dermatológica y Estética. Dermasonido Medellín, Colombia.",
     "country": "Colombia",
     "city": "Medellín",
     "image": "speaker-2.png"
@@ -21,7 +21,7 @@
     "id": "speaker_3",
     "url": "dra-diana-rodriguez",
     "name": "Dra. Diana Milena Rodríguez Merchán ",
-    "description": "Obstetra y ginecóloga, Universidad Nacional de Colombia. Ginecología urológica, Universidad Nacional de Colombia. Ecografista de Piso pélvico, Universidad de Chile. Coordinadora Unidad de Uroginecología, Sura Medellín. Coordinadora Unidad de Piso pélvico, Clínica del Prado. Docente Uroginecología, Universidad Nacional de Colombia.",
+    "description": "Obstetra, ginecología y uroginecóloga, Universidad Nacional de Colombia, Universidad de Chile. Coordinadora Unidad de Uroginecología Sura, Medellin. Docente Universidad Nacional de Colombia.",
     "country": "Colombia",
     "city": "Cali",
     "image": "speaker-3.png"
@@ -30,7 +30,7 @@
     "id": "speaker_4",
     "url": "dr-miguel-vega-arango",
     "name": "Dr. Miguel Vega Arango",
-    "description": "Especialista Diagnóstico por imagen. Fellowship Musculoesquelético, McGill University, Montreal, Canadá. Docente Universidad Pontificia Bolivariana, Medellín, Colombia.",
+    "description": "Especialista Diagnóstico por imagen, Fellowship Musculoesquelético, McGill University Montreal, Canadá. Docente Universidad Pontificia Bolivariana, Medellin, Colombia.",
     "country": "Colombia",
     "city": "Medellín",
     "image": "speaker-4.png"
@@ -39,7 +39,7 @@
     "id": "speaker_5",
     "url": "dr-jesus-sanabria",
     "name": "Dr. Jesús Sanabria",
-    "description": "Especialista Diagnóstico por imagen. Subespecialidad en imagen corporal, Hospital Italiano, Buenos Aires, Argentina",
+    "description": "Especialista Diagnóstico por imagen, Hospital Italiano Buenos Aires, Argentina. Fellow en Imágenes Corporales.",
     "country": "Colombia",
     "city": "Cúcuta",
     "image": "speaker-5.png"
@@ -48,7 +48,7 @@
     "id": "speaker_6",
     "url": "dr-sergio-andres-galvis",
     "name": "Dr. Sergio Andrés Galvis",
-    "description": "Especialista diagnóstico por imágenes con fellow en músculo esqueletico, Instituto Rossi, Buenos Aires, Argentina",
+    "description": "Especialista Diagnóstico por Imágenes, subespecialista en Músculo Esquelético, Instituto Rossi, Buenos Aires, Argentina.",
     "country": "Colombia",
     "city": "",
     "image": "speaker-6.png"
