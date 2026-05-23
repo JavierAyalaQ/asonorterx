@@ -4,7 +4,7 @@ import Typography from "@/components/Typography.astro";
 ---
 
 {/* style="background-image: url('/seo-banner.webp');" --> */}
-<Container class:list="bg-image-section-1">
+<Container class:list="bg-image-section-1 flex flex-col gap-4 prose">
   <div class="relative">
     <Typography
       as="h2"
@@ -21,6 +21,44 @@ import Typography from "@/components/Typography.astro";
     >
       sede del evento
     </Typography>
+  </div>
+  <Typography as="p" variant="p" class:list="mt-8">
+    Ubicada en el nororiente de Colombia, Cúcuta es una ciudad llena de
+    historia, cultura y gente cálida. Conocida como La Perla del Norte, la
+    ciudad combina el ambiente moderno con la tradición nortesantandereana
+    siendo un destino imperdible para quienes quieren conocer nuevos destinos a
+    Colombia.
+  </Typography>
+  <Typography as="p" variant="p">
+    Entre sus lugares mas destacados encontramos el Parque Santander, el
+    Malecón, el Estadio General Santander, el Mirador Cristo Rey, y el Templo
+    Historico de Villa del Rosario.
+  </Typography>
+  <Typography as="p" variant="p">
+    Visitar Cúcuta es descubrir una ciudad llena de energía, tradición y
+    oportunidades para disfrutar momentos inolvidables.
+  </Typography>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+    <img
+      src="/city/city-1.jpg"
+      alt=""
+      class="overflow-hidden aspect-2/1 w-full max-w-full bg-center bg-cover object-cover"
+    />
+    <img
+      src="/city/city-2.jpg"
+      alt=""
+      class="overflow-hidden aspect-2/1 w-full max-w-full bg-center bg-cover object-cover"
+    />
+    <img
+      src="/city/city-3.jpg"
+      alt=""
+      class="overflow-hidden aspect-2/1 w-full max-w-full bg-center bg-cover object-cover"
+    />
+    <img
+      src="/city/city-4.jpg"
+      alt=""
+      class="overflow-hidden aspect-2/1 w-full max-w-full bg-center bg-cover object-cover"
+    />
   </div>
 </Container>
 
