@@ -1,0 +1,40 @@
+---
+import Container from "@/components/Container.astro";
+import Typography from "@/components/Typography.astro";
+
+import Table from "@/components/Table/Table.astro";
+import inscriptions from "@/assets/data/inscriptions.json";
+---
+
+<Container
+  title="Inscripciones"
+  titleAs="h2"
+  titleVariant="h2"
+  class:list="flex flex-col gap-4 prose"
+>
+  <Table
+    color="gray"
+    mobileCollapse="fit"
+    columns={["Categoría", "Valor de inscripción"]}
+    data={inscriptions.map((inscription) => [
+      inscription.category,
+      inscription.normal_price,
+    ])}
+  />
+
+  <Typography as="p" variant="p" color="primary">
+    Inscríbete al evento realizando transferencia bancaria o consignación a la
+    cuenta de ahorros
+    <span class="font-semibold">
+      BANCO DAVIVIENDA 068800011212 ASOCIACIÓN NORTESANTANDEREANA DE RADIOLOGÍA
+      NIT. 807000585-4
+    </span> y completando el formulario.
+  </Typography>
+
+  <a
+    href="https://docs.google.com/forms/d/e/1FAIpQLSc6grf8Z7yuxUXkI-M1oe3_tD2d4JbZFzGrcwwy2HzNmC_f0A/viewform?usp=dialog"
+    target="_blank"
+    class="mx-auto mt-4 text-center w-fit transition-colors bg-teal-700 hover:bg-teal-800 text-white font-semibold py-2 px-4 rounded"
+    >Realizar Inscripción</a
+  >
+</Container>

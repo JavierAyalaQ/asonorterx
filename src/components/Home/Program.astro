@@ -1,0 +1,89 @@
+---
+import Container from "@/components/Container.astro";
+import Typography from "@/components/Typography.astro";
+
+import program from "@/assets/data/program.json";
+---
+
+<Container title="Programación" titleAs="h2" titleVariant="h2">
+  {
+    (
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-8">
+        {/* Viernes */}
+        <div>
+          <Typography as="h3" variant="h4" color="secondary">
+            Viernes, 11 de septiembre
+          </Typography>
+          <div class="mt-4 space-y-2">
+            {program[0].friday_september_11?.map((event) => (
+              <div
+                class:list={[
+                  "border-l-4 pl-4",
+                  event.type === "break"
+                    ? "border-blue-400"
+                    : "border-teal-700",
+                ]}
+              >
+                <Typography as="strong" variant="strong" color="primary">
+                  {event.start} - {event.end}
+                </Typography>
+                <Typography as="p" variant="p" color="primary">
+                  {event.title}
+                </Typography>
+                {event.speakers && (
+                  <Typography
+                    as="p"
+                    variant="small"
+                    weight="bold"
+                    color="primary"
+                  >
+                    {event.speakers.length > 1
+                      ? event.speakers.join(" y ")
+                      : event.speakers}
+                  </Typography>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* Sábado */}
+        <div>
+          <Typography as="h3" variant="h4" color="secondary">
+            Sábado, 12 de septiembre
+          </Typography>
+          <ul class="mt-4 space-y-2">
+            {program[1].saturday_september_12?.map((event) => (
+              <li
+                class:list={[
+                  "border-l-4 pl-4",
+                  event.type === "break"
+                    ? "border-blue-400"
+                    : "border-teal-700",
+                ]}
+              >
+                <Typography as="strong" variant="strong" color="primary">
+                  {event.start} - {event.end}
+                </Typography>
+                <Typography as="p" variant="p" color="primary">
+                  {event.title}
+                </Typography>
+                {event.speakers && (
+                  <Typography
+                    as="p"
+                    variant="small"
+                    weight="bold"
+                    color="primary"
+                  >
+                    {event.speakers.length > 1
+                      ? event.speakers.join(" y ")
+                      : event.speakers}
+                  </Typography>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    )
+  }
+</Container>

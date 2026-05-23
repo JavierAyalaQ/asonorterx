@@ -1,0 +1,34 @@
+---
+import Container from "@/components/Container.astro";
+import Typography from "@/components/Typography.astro";
+---
+
+{/* style="background-image: url('/seo-banner.webp');" --> */}
+<Container class:list="bg-image-section-1">
+  <div class="relative">
+    <Typography
+      as="h2"
+      variant="h1"
+      color="secondary"
+      class:list="font-serif text-outline-teal-100 text-center -rotate-4 -skew-x-12 md:scale-110"
+    >
+      Cúcuta
+    </Typography>
+    <Typography
+      as="p"
+      variant="p"
+      class:list="absolute italic -bottom-4 left-1/2 -translate-x-1/2 text-center"
+    >
+      sede del evento
+    </Typography>
+  </div>
+</Container>
+
+<style>
+  .bg-image-section-1 {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+  }
+</style>

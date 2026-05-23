@@ -3,349 +3,42 @@ import Container from "@/components/Container.astro";
 import Typography from "@/components/Typography.astro";
 import Layout from "@/layouts/Layout.astro";
 
-import speakers from "@/assets/data/speakers.json";
-import program from "@/assets/data/program.json";
-import inscriptions from "@/assets/data/inscriptions.json";
-import Table from "@/components/Table/Table.astro";
+/* Sections */
+import Hero from "@/components/Home/Hero.astro";
+import About from "@/components/Home/About.astro";
+import Speakers from "@/components/Home/Speakers.astro";
+import Program from "@/components/Home/Program.astro";
+import Inscriptions from "@/components/Home/Inscriptions.astro";
+import City from "@/components/Home/City.astro";
+import Sponsors from "@/components/Home/Sponsors.astro";
 ---
 
 <Layout>
   <div class="bg-white">
-    <Container
-      title="XV Simposio Internacional Nortesantandereano de Radiología"
-      titleAs="h1"
-      class:list="flex flex-col gap-4 prose bg-linear-to-r bg-clip-text text-center text-transparent from-teal-900 to-blue-900"
-    >
-      <div
-        class="flex flex-col items-center justify-center w-full gap-4 -mt-4 md:-mt-8"
-      >
-        <div
-          class="px-6 py-1 font-semibold text-center text-white bg-linear-to-r to-teal-900 from-blue-900 w-fit"
-        >
-          <span class:list={"font-serif tracking-wider text-lg md:text-xl"}>
-            Inteligencia Artificial Imagenológica y Estudios Huérfanos
-          </span>
-        </div>
-        <div class="flex flex-col gap-8 mt-4 md:gap-12 md:flex-row">
-          <div
-            class="flex flex-col items-center justify-center gap-2 text-center flex-3"
-          >
-            <p
-              class="font-serif text-xl text-blue-800 border-b-2 border-blue-800 md:text-2xl"
-            >
-              Hotel Casino Internacional
-              <br />
-              Cúcuta, Colombia
-            </p>
-            <p class="italic text-blue-800 text-md md:text-xl">
-              <span class="font-black">11</span> y <span class="font-black"
-                >12</span
-              > de septiembre de <strong>2026</strong>
-            </p>
-          </div>
-          <div class="flex items-center justify-center gap-12 flex-2">
-            <div class="flex flex-col items-center justify-center text-center">
-              <Typography
-                as="span"
-                variant="p"
-                color="primary"
-                class="font-medium text-center">Invita</Typography
-              >
-              <img
-                src={`/logos/logo-asonorterx-fondo.png`}
-                alt="Logo de la Asociación Nortesantandereana de Radiología"
-                class="w-16 max-w-full md:w-20 aspect-square"
-              />
-            </div>
-            <div class="flex flex-col items-center justify-center text-center">
-              <Typography
-                as="span"
-                variant="p"
-                color="primary"
-                class="font-medium text-center">Avala</Typography
-              >
-              <img
-                src={`/logos/logo-acr-fondo.png`}
-                alt="Logo de la Asociación Nortesantandereana de Radiología"
-                class="w-16 max-w-full md:w-20 aspect-square"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </Container>
+    <Hero />
   </div>
 
   <div class="bg-gray-100">
-    <Container
-      title="Presentación"
-      titleAs="h2"
-      titleVariant="h2"
-      class:list="flex flex-col gap-4 prose"
-    >
-      <Typography as="p" variant="p" color="primary">
-        La Asociación Nortesantandereana de Radiología se complace en anunciar
-        la realización del XV Simposio Internacional Nortesantandereano de
-        Radiología, que se llevará a cabo los días 11 y 12 de septiembre de
-        2026, en el Hotel Casino Internacional, Cúcuta, Colombia.
-      </Typography>
-
-      <Typography as="p" variant="p" color="primary">
-        Este evento reunirá a destacados radiólogos, especialistas en
-        imagenología y profesionales de la salud de todo el mundo para compartir
-        conocimientos, avances tecnológicos y experiencias clínicas relacionadas
-        con los Inteligencia Artificial Imagenológica y Estudios Huérfanos. El
-        simposio ofrecerá una plataforma para la discusión de casos clínicos
-        complejos, presentaciones magistrales, talleres prácticos.
-      </Typography>
-    </Container>
+    <About />
   </div>
 
   <div id="speakers" class="bg-white">
-    <Container title="Conferencistas" titleAs="h2" titleVariant="h2">
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-        {
-          speakers.map((speaker) => (
-            <div class="flex flex-col items-center gap-2 text-center">
-              <img
-                src={`/speakers/${speaker.image}`}
-                alt={speaker.name}
-                class="max-w-28"
-              />
-              <Typography
-                as="h3"
-                variant="strong"
-                color="secondary"
-                class="font-semibold text-center transition-all cursor-pointer hover:underline"
-              >
-                {speaker.name}
-              </Typography>
-              <Typography
-                as="p"
-                variant="p"
-                color="primary"
-                class:list="text-pretty"
-              >
-                {speaker.description}
-              </Typography>
-              <Typography
-                as="p"
-                variant="small"
-                weight={"bold"}
-                class:list="italic"
-              >
-                {speaker.city ? `${speaker.city}, ` : ""}
-                {speaker.country}
-              </Typography>
-            </div>
-          ))
-        }
-      </div>
-    </Container>
+    <Speakers />
   </div>
 
-  <div id="schedule" class="bg-gray-100">
-    <Container title="Programación" titleAs="h2" titleVariant="h2">
-      {
-        (
-          <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-8">
-            {/* Viernes */}
-            <div>
-              <Typography as="h3" variant="h4" color="secondary">
-                Viernes, 11 de septiembre
-              </Typography>
-              <div class="mt-4 space-y-2">
-                {program[0].friday_september_11?.map((event) => (
-                  <div
-                    class:list={[
-                      "border-l-4 pl-4",
-                      event.type === "break"
-                        ? "border-blue-400"
-                        : "border-teal-700",
-                    ]}
-                  >
-                    <Typography as="strong" variant="strong" color="primary">
-                      {event.start} - {event.end}
-                    </Typography>
-                    <Typography as="p" variant="p" color="primary">
-                      {event.title}
-                    </Typography>
-                    {event.speakers && (
-                      <Typography
-                        as="p"
-                        variant="small"
-                        weight="bold"
-                        color="primary"
-                      >
-                        {event.speakers.length > 1
-                          ? event.speakers.join(" y ")
-                          : event.speakers}
-                      </Typography>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-            {/* Sábado */}
-            <div>
-              <Typography as="h3" variant="h4" color="secondary">
-                Sábado, 12 de septiembre
-              </Typography>
-              <ul class="mt-4 space-y-2">
-                {program[1].saturday_september_12?.map((event) => (
-                  <li
-                    class:list={[
-                      "border-l-4 pl-4",
-                      event.type === "break"
-                        ? "border-blue-400"
-                        : "border-teal-700",
-                    ]}
-                  >
-                    <Typography as="strong" variant="strong" color="primary">
-                      {event.start} - {event.end}
-                    </Typography>
-                    <Typography as="p" variant="p" color="primary">
-                      {event.title}
-                    </Typography>
-                    {event.speakers && (
-                      <Typography
-                        as="p"
-                        variant="small"
-                        weight="bold"
-                        color="primary"
-                      >
-                        {event.speakers.length > 1
-                          ? event.speakers.join(" y ")
-                          : event.speakers}
-                      </Typography>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        )
-      }
-    </Container>
+  <div id="program" class="bg-gray-100">
+    <Program />
   </div>
 
   <div id="inscriptions" class="bg-white">
-    <Container
-      title="Inscripciones"
-      titleAs="h2"
-      titleVariant="h2"
-      class:list="flex flex-col gap-4 prose"
-    >
-      <Table
-        color="gray"
-        mobileCollapse="fit"
-        columns={[
-          "Categoría",
-          "Precio hasta el 1 de Septiembre",
-          "Precio después del 1 de Septiembre",
-        ]}
-        data={inscriptions.map((inscription) => [
-          inscription.category,
-          inscription.normal_price,
-          inscription.late_price,
-        ])}
-      />
-
-      <Typography as="p" variant="p" color="primary">
-        Inscríbete al evento realizando transferencia bancaria o consignación a
-        la cuenta de ahorros <strong
-          >Banco Davivienda 068800011212 ASOCIACIóN NORTESANTANDEREANA DE
-          RADIOLOGÍA NIT. 807000585-4</strong
-        > y envía tu comprobante de pago al número de contacto.
-      </Typography>
-    </Container>
+    <Inscriptions />
   </div>
 
   <div id="" class="bg-gray-100">
-    <Container
-      title="Hotel Casino Internacional"
-      titleAs="h2"
-      titleVariant="h2"
-      class:list="flex flex-col gap-4 prose"
-    >
-      <Typography as="p" variant="p" color="primary">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis sapiente
-        dolor fugiat perferendis tempore. Minima, quas quos tempora aspernatur
-        harum ad doloribus nihil sunt maiores, odio magni, nesciunt enim
-        asperiores?
-      </Typography>
-    </Container>
+    <City />
   </div>
 
   <div id="sponsors" class="bg-white">
-    <Container
-      title="Auspiciadores"
-      titleAs="h2"
-      titleVariant="h2"
-      class:list="flex flex-col gap-4 prose"
-    >
-      <div class="flex flex-wrap justify-center gap-4 md:gap-8 items-center">
-        <img
-          class="max-w-full h-16 md:h-24"
-          src={"/logos/somediag.png"}
-          alt="LOGO SOMEDIAG"
-        />
-        <img
-          class="max-w-full h-16 md:h-24"
-          src={"/logos/heidy-portilla.jpeg"}
-          alt="LOGO DRA.HEIDY PORTILLA"
-        />
-        <img
-          class="max-w-full h-16 md:h-24"
-          src={"/logos/cidim.png"}
-          alt="LOGO CIDIM"
-        />
-        <img
-          class="max-w-full h-16 md:h-24"
-          src={"/logos/petct.png"}
-          alt="LOGO PETCT"
-        />
-        <img
-          class="max-w-full h-20 md:h-28"
-          src={"/logos/solmedicas.jpeg"}
-          alt="LOGO SOLUCIONES MÉDICAS"
-        />
-        <img
-          class="max-w-full h-16 md:h-24"
-          src={"/logos/vivemed.png"}
-          alt="LOGO VIVEMED"
-        />
-        <img
-          class="max-w-full h-16 md:h-24"
-          src={"/logos/hotel-casino.png"}
-          alt="LOGO HOTEL CASINO INTERNACIONAL"
-        />
-        <img
-          class="max-w-full h-12 md:h-16"
-          src={"/logos/ecoimagen.png"}
-          alt="LOGO ECOIMAGEN"
-        />
-        <img
-          class="max-w-full h-16 md:h-24"
-          src={"/logos/ivan-penaranda.jpeg"}
-          alt="LOGO DR. IVAN PEÑARANDA"
-        />
-        <img
-          class="max-w-full h-16 md:h-24"
-          src={"/logos/elaser.png"}
-          alt="LOGO ELASER"
-        />
-        <img
-          class="max-w-full h-16 md:h-24"
-          src={"/logos/transalim.jpeg"}
-          alt="LOGO TRANSALIM"
-        />
-        <img
-          class="max-w-full h-16 md:h-24"
-          src={"/logos/rodriguez-radiologos.png"}
-          alt="LOGO RODRIGUEZ RADIÓLOGOS"
-        />
-      </div>
-    </Container>
+    <Sponsors />
   </div>
 </Layout>

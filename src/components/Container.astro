@@ -6,7 +6,7 @@ type Props<Tag extends HTMLTag> = Polymorphic<{
   as: Tag;
   className?: string;
   title?: string;
-  titleAs?: string;
+  titleAs?: Tag;
   titleVariant?: string;
 }>;
 
@@ -16,10 +16,14 @@ const {
   titleAs = "h1",
   titleVariant = "h1",
   class: className = "",
+  ...props
 } = Astro.props;
 ---
 
-<Tag class:list={[`max-w-7xl px-8 md:px-24 py-20 mx-auto ${className}`]}>
+<Tag
+  class:list={[`max-w-7xl px-8 md:px-24 py-20 mx-auto ${className}`]}
+  {...props}
+>
   {
     title && (
       <Typography

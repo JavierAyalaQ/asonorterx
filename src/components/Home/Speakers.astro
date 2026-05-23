@@ -1,0 +1,47 @@
+---
+import Container from "@/components/Container.astro";
+import Typography from "@/components/Typography.astro";
+
+import speakers from "@/assets/data/speakers.json";
+---
+
+<Container title="Conferencistas" titleAs="h2" titleVariant="h2">
+  <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+    {
+      speakers.map((speaker) => (
+        <div class="flex flex-col items-center gap-2 text-center">
+          <img
+            src={`/speakers/${speaker.image}`}
+            alt={speaker.name}
+            class="max-w-28"
+          />
+          <Typography
+            as="h3"
+            variant="strong"
+            color="secondary"
+            class="font-semibold text-center transition-all cursor-pointer hover:underline"
+          >
+            {speaker.name}
+          </Typography>
+          <Typography
+            as="p"
+            variant="p"
+            color="primary"
+            class:list="text-pretty"
+          >
+            {speaker.description}
+          </Typography>
+          <Typography
+            as="p"
+            variant="small"
+            weight={"bold"}
+            class:list="italic"
+          >
+            {speaker.city ? `${speaker.city}, ` : ""}
+            {speaker.country}
+          </Typography>
+        </div>
+      ))
+    }
+  </div>
+</Container>

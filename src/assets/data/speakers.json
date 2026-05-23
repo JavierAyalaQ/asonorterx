@@ -10,38 +10,38 @@
   },
   {
     "id": "speaker_2",
-    "url": "dr-daniel-noreña",
-    "name": "Dr. Daniel Noreña Rengifo",
-    "description": "Especialista Diagnóstico por imagen. Fellow Musculoesquelético, experto en Ecografía Dermatológica y Estética. Dermasonido Medellín, Colombia.",
+    "url": "dr-jesus-sanabria",
+    "name": "Dr. Jesús Sanabria",
+    "description": "Especialista Diagnóstico por imagen, Hospital Italiano Buenos Aires, Argentina. Fellow en Imágenes Corporales.",
     "country": "Colombia",
-    "city": "Medellín",
+    "city": "Cúcuta",
     "image": "speaker-2.png"
   },
   {
     "id": "speaker_3",
     "url": "dra-diana-rodriguez",
     "name": "Dra. Diana Milena Rodríguez Merchán ",
-    "description": "Obstetra, ginecología y uroginecóloga, Universidad Nacional de Colombia, Universidad de Chile. Coordinadora Unidad de Uroginecología Sura, Medellin. Docente Universidad Nacional de Colombia.",
+    "description": "Obstetra y ginecóloga, Universidad Nacional de Colombia. Uroginecóloga y ecografista de piso pélvico, Universidad de Chile. Coordinadora Unidad de Uroginecología Sura, Medellin. Coordinadora unidad de Piso pélvico, Clínica del Prado. Docente Universidad Nacional de Colombia.",
     "country": "Colombia",
     "city": "Cali",
     "image": "speaker-3.png"
   },
   {
     "id": "speaker_4",
-    "url": "dr-miguel-vega-arango",
-    "name": "Dr. Miguel Vega Arango",
-    "description": "Especialista Diagnóstico por imagen, Fellowship Musculoesquelético, McGill University Montreal, Canadá. Docente Universidad Pontificia Bolivariana, Medellin, Colombia.",
+    "url": "dr-daniel-noreña",
+    "name": "Dr. Daniel Noreña Rengifo",
+    "description": "Especialista Diagnóstico por imagen. Fellow Musculoesquelético, experto en Ecografía Dermatológica y Estética. Dermasonido Medellín, Colombia.",
     "country": "Colombia",
     "city": "Medellín",
     "image": "speaker-4.png"
   },
   {
     "id": "speaker_5",
-    "url": "dr-jesus-sanabria",
-    "name": "Dr. Jesús Sanabria",
-    "description": "Especialista Diagnóstico por imagen, Hospital Italiano Buenos Aires, Argentina. Fellow en Imágenes Corporales.",
+    "url": "dr-miguel-vega-arango",
+    "name": "Dr. Miguel Vega Arango",
+    "description": "Especialista Diagnóstico por imagen, Fellowship Musculoesquelético, McGill University Montreal, Canadá. Docente Universidad Pontificia Bolivariana, Medellin, Colombia.",
     "country": "Colombia",
-    "city": "Cúcuta",
+    "city": "Medellín",
     "image": "speaker-5.png"
   },
   {

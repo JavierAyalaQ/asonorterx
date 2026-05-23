@@ -37,12 +37,13 @@ const {
 } = Astro.props;
 ---
 
-<div class="relative overflow-x-auto rounded">
+<div class:list={["relative overflow-x-auto rounded"]}>
   <table
     class:list={[
       "text-xs md:text-md text-left",
       colorVariants[color].head,
-      mobileCollapse === "scroll" ? "w-full" : "w-fit sm:w-full",
+      mobileCollapse === "scroll" ? "w-full" : "",
+      mobileCollapse === "fit" ? "w-fit sm:w-full" : "",
     ]}
   >
     <thead
@@ -70,9 +71,8 @@ const {
               scope="row"
               class:list={[
                 "p-2 md:px-6 md:py-4 font-bold",
-                mobileCollapse === "scroll"
-                  ? "w-full  whitespace-nowrap"
-                  : "w-fit",
+                mobileCollapse === "scroll" ? "w-full  whitespace-nowrap" : "",
+                mobileCollapse === "fit" ? "w-fit" : "",
               ]}
             >
               {item[0]}

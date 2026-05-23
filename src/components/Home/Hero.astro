@@ -1,0 +1,66 @@
+---
+import Container from "@/components/Container.astro";
+import Typography from "@/components/Typography.astro";
+---
+
+<Container
+  title="XV Simposio Internacional Nortesantandereano de Radiología"
+  titleAs="h1"
+  class:list="flex flex-col gap-4 prose bg-linear-to-r bg-clip-text text-center text-transparent from-teal-900 to-blue-900"
+>
+  <div
+    class="flex flex-col items-center justify-center w-full gap-4 -mt-4 md:-mt-8"
+  >
+    <div
+      class="px-6 py-1 font-semibold text-center text-white bg-linear-to-r to-teal-900 from-blue-900 w-fit"
+    >
+      <span class:list={"font-serif tracking-wider text-lg md:text-xl"}>
+        Inteligencia Artificial Imagenológica y Estudios Huérfanos
+      </span>
+    </div>
+    <div class="flex flex-col gap-8 mt-4 md:gap-12 md:flex-row">
+      <div
+        class="flex flex-col items-center justify-center gap-2 text-center flex-3"
+      >
+        <p
+          class="font-serif text-xl text-blue-800 border-b-2 border-blue-800 md:text-2xl pb-2"
+        >
+          Hotel Casino Internacional
+          <br />
+          Cúcuta, Colombia
+        </p>
+        <p class="text-blue-800 text-md md:text-xl -mt-1">
+          11 y 12 de septiembre de 2026
+        </p>
+      </div>
+      <div class="flex items-center justify-center gap-12 flex-2">
+        <div class="flex flex-col items-center justify-center text-center">
+          <Typography
+            as="span"
+            variant="p"
+            color="primary"
+            class="font-medium text-center">Invita</Typography
+          >
+          <img
+            src={`/logos/logo-asonorterx-fondo.png`}
+            alt="Logo de la Asociación Nortesantandereana de Radiología"
+            class="w-16 max-w-full md:w-20 aspect-square"
+          />
+        </div>
+        <div class="flex flex-col items-center justify-center text-center">
+          <Typography
+            as="span"
+            variant="p"
+            color="primary"
+            class="font-medium text-center">Avala</Typography
+          >
+          <img
+            src={`/logos/logo-acr-fondo.png`}
+            alt="Logo de la Asociación Nortesantandereana de Radiología"
+            class="w-16 max-w-full md:w-20 aspect-square"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</Container>
