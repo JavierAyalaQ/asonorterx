@@ -1,13 +1,27 @@
 ---
 import Container from "@/components/Container.astro";
+import Typography from "../Typography.astro";
 ---
 
-<Container
-  title="Auspiciadores"
-  titleAs="h2"
-  titleVariant="h2"
-  class:list="flex flex-col gap-4 prose"
->
+<Container class:list="flex flex-col gap-4 prose">
+  <Typography as="h2" variant="h2" color="primary" class="block mb-4 md:mb-8"
+    >Patrocinadores</Typography
+  >
+  <div class="flex flex-wrap justify-center gap-4 md:gap-8 items-center pb-20">
+    <img
+      class="max-w-full h-12 md:h-16"
+      src={"/logos/cmr.jpg"}
+      alt="LOGO CMR"
+    />
+    <img
+      class="max-w-full h-12 md:h-16"
+      src={"/logos/mindray.png"}
+      alt="LOGO MINDRAY"
+    />
+  </div>
+  <Typography as="h2" variant="h2" color="primary" class="block mb-4 md:mb-8"
+    >Auspiciadores</Typography
+  >
   <div class="flex flex-wrap justify-center gap-4 md:gap-8 items-center">
     <img
       class="max-w-full h-16 md:h-24"
