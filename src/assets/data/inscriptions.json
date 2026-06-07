@@ -11,12 +11,12 @@
   },
   {
     "id": "inscription_3",
-    "category": "Médicos generales y profesionales de la salud",
+    "category": "Tecnólogos, médicos generales y profesionales de la salud",
     "normal_price": "$50.000"
   },
   {
     "id": "inscription_4",
-    "category": "Residentes de radiología o asociados ACR",
+    "category": "Asociados ACR y Residentes",
     "normal_price": "$100.000"
   },
   {

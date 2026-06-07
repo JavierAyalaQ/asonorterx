@@ -37,20 +37,11 @@
   },
   {
     "id": "speaker_5",
-    "url": "dr-miguel-vega-arango",
-    "name": "Dr. Miguel Vega Arango",
-    "description": "Especialista Diagnóstico por imagen, Fellowship Musculoesquelético, McGill University Montreal, Canadá. Docente Universidad Pontificia Bolivariana, Medellin, Colombia.",
-    "country": "Colombia",
-    "city": "Medellín",
-    "image": "speaker-5.png"
-  },
-  {
-    "id": "speaker_6",
     "url": "dr-sergio-andres-galvis",
     "name": "Dr. Sergio Andrés Galvis",
     "description": "Especialista Diagnóstico por Imágenes, subespecialista en Músculo Esquelético, Instituto Rossi, Buenos Aires, Argentina.",
     "country": "Colombia",
     "city": "",
-    "image": "speaker-6.png"
+    "image": "speaker-5.png"
   }
 ]
