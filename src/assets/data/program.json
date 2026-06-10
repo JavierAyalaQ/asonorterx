@@ -6,7 +6,7 @@
         "start": "12:00 p.m.",
         "end": "2:00 p.m.",
         "type": "speak",
-        "title": "Taller Teórico Práctico de Estudios Imagenológicos. Rx Tórax - Rx Óseo - Ecografía - Tac. “Lo que debemos saber” para médicos, internos y estudiantes y técnicos.",
+        "title": "Taller Teórico Práctico de Estudios Imagenológicos: Rx Tórax - Rx Óseo - Ecografía - TAC. “Lo que debemos saber” para médicos, internos, estudiantes y técnicos.",
         "speakers": ["Dr. Oscar Parada", "Dr. Jimmy Prieto"]
       },
       {
@@ -30,7 +30,7 @@
         "start": "2:10 p.m.",
         "end": "2:30 p.m.",
         "type": "speak",
-        "title": "Lesiones Hepáticas. Qué ver, cómo interpretar, qué reportar.",
+        "title": "Lesiones Hepáticas: qué ver, cómo interpretar, qué reportar.",
         "speakers": ["Dr. Jesús Sanabria"]
       },
       {
@@ -38,16 +38,16 @@
         "start": "2:30 p.m.",
         "end": "3:00 p.m.",
         "type": "speak",
-        "title": "Ecografía de Tobillo.  Lo que el Radiólogo debe saber.",
-        "speakers": ["Dr. Sergio Andrés Galvis"]
+        "title": "Entendiendo el US de Piso Pélvico.",
+        "speakers": ["Dra. Diana Rodríguez"]
       },
       {
         "id": "event_6",
         "start": "3:00 p.m.",
         "end": "3:30 p.m.",
         "type": "speak",
-        "title": "Inteligencia Artificial en Diagnostico por imágenes: del algoritmo a la práctica clínica.",
-        "speakers": ["Dr. Oswaldo Ramos"]
+        "title": "US de Piso Pélvico por compartimientos y su aplicación clínica.",
+        "speakers": ["Dra. Diana Rodríguez"]
       },
       {
         "id": "event_7",
@@ -62,24 +62,24 @@
         "start": "3:45 p.m.",
         "end": "4:15 p.m.",
         "type": "speak",
-        "title": "Ecografía de Codo, Lo que el Radiólogo Debe Saber.",
-        "speakers": ["Dr. Sergio Andrés Galvis"]
+        "title": "US de Piso Pélvico, qué debemos informar.",
+        "speakers": ["Dra. Diana Rodríguez"]
       },
       {
         "id": "event_9",
         "start": "4:15 p.m.",
         "end": "4:45 p.m.",
         "type": "speak",
-        "title": "Ecografía Plantar. Anatomía y patologías más frecuentes.",
-        "speakers": ["Dr. Sergio Andrés Galvis"]
+        "title": "Inteligencia Artificial en Diagnóstico por imágenes: del algoritmo a la práctica clínica.",
+        "speakers": ["Dr. Oswaldo Ramos"]
       },
       {
         "id": "event_10",
         "start": "4:45 p.m.",
         "end": "5:15 p.m.",
         "type": "speak",
-        "title": "Impacto de IA: Mama & Tiroides. Avances y aplicaciones en la interpretación.",
-        "speakers": ["Dr. Oswaldo Ramos"]
+        "title": "Ecografía Plantar. Anatomía y patologías más frecuentes.",
+        "speakers": ["Dr. Sergio Andrés Galvis"]
       },
       {
         "id": "event_11",
@@ -101,9 +101,9 @@
         "id": "event_13",
         "start": "6:15 p.m.",
         "end": "6:45 p.m.",
-        "type": "break",
-        "title": "Actualización equipos imagenológicos. Speaker. Patrocinios.",
-        "speakers": []
+        "type": "speak",
+        "title": "Taller practico MSK. Pacientes en vivos.",
+        "speakers": ["Dr. Sergio Andrés Galvis"]
       },
       {
         "id": "event_14",
@@ -122,24 +122,24 @@
         "start": "08:00 a.m.",
         "end": "08:20 a.m.",
         "type": "speak",
-        "title": "Imagenología en Patología Respiratoria. ¿Cuál es la técnica más apropiada?",
-        "speakers": ["Dr. Oswaldo Ramos"]
+        "title": "Ultrasonido de nervio periférico en miembro superior.",
+        "speakers": ["Dr. Daniel Noreña"]
       },
       {
         "id": "event_2",
         "start": "08:20 a.m.",
         "end": "08:40 a.m.",
         "type": "speak",
-        "title": "Ultrasonido de nervio periférico en miembro superior.",
-        "speakers": ["Dr. Daniel Noreña"]
+        "title": "Imagenología en Patología Respiratoria. ¿Cuál es la técnica más apropiada?",
+        "speakers": ["Dr. Oswaldo Ramos"]
       },
       {
         "id": "event_3",
         "start": "08:40 a.m.",
         "end": "09:00 a.m.",
         "type": "speak",
-        "title": "Tips en Ecografía Piso Pélvico. Lo que el radiólogo debe informar.",
-        "speakers": ["Dra. Diana Rodríguez"]
+        "title": "Ecografía de Tobillo. Lo que el Radiólogo debe saber.",
+        "speakers": ["Dr. Sergio Andrés Galvis"]
       },
       {
         "id": "event_4",
@@ -154,7 +154,7 @@
         "start": "09:20 a.m.",
         "end": "09:40 a.m.",
         "type": "speak",
-        "title": "Taller Practico Imágenes Dinámicas del comportamiento posterior.",
+        "title": "Ecografía de Codo, Lo que el Radiólogo debe saber.",
         "speakers": ["Dra. Diana Rodríguez"]
       },
       {
@@ -178,24 +178,24 @@
         "start": "10:20 a.m.",
         "end": "10:40 a.m.",
         "type": "speak",
-        "title": "Taller Practico Imágenes Dinámicas del comportamiento posterior.",
-        "speakers": ["Dra. Diana Rodríguez"]
-      },
-      {
-        "id": "event_9",
-        "start": "10:40 a.m.",
-        "end": "11:10 a.m.",
-        "type": "speak",
         "title": "Anatomía Facial, Taller practico para Dummies y no Dummies.",
         "speakers": ["Dr. Daniel Noreña"]
       },
       {
+        "id": "event_9",
+        "start": "10:40 a.m.",
+        "end": "11:00 a.m.",
+        "type": "speak",
+        "title": "Resonancia Mamaria: indicaciones, limitaciones y hallazgos clave.",
+        "speakers": ["Dr. Oswaldo Ramos"]
+      },
+      {
         "id": "event_10",
-        "start": "11:10 a.m.",
+        "start": "11:00 a.m.",
         "end": "11:20 a.m.",
-        "type": "break",
-        "title": "Patrocinios.",
-        "speakers": []
+        "type": "speak",
+        "title": "Impacto de IA: Mama & Tiroides. Avances y aplicaciones en la interpretación.",
+        "speakers": ["Dr. Oswaldo Ramos"]
       },
       {
         "id": "event_11",
@@ -204,6 +204,14 @@
         "type": "speak",
         "title": "Taller de Inteligencia Artificial, casos clínicos.",
         "speakers": ["Dr. Oswaldo Ramos"]
+      },
+      {
+        "id": "event_12",
+        "start": "12:00 p.m.",
+        "end": "12:30 p.m.",
+        "type": "speak",
+        "title": "Taller. Anatomía facial. casos clínicos.",
+        "speakers": ["Dr. Daniel Noreña"]
       }
     ]
   }

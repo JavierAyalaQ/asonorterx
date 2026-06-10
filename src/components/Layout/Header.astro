@@ -41,11 +41,7 @@ const pathname = Astro.url.pathname;
           routes.map((route) => (
             <li>
               <a
-                href={
-                  pathname === "/inscriptions"
-                    ? `/${route.href}`
-                    : `${route.href}`
-                }
+                href={pathname !== "/" ? `/${route.href}` : `${route.href}`}
                 class="hover:underline"
               >
                 {route.name}
