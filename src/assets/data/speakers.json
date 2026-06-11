@@ -1,7 +1,6 @@
 [
   {
     "id": "speaker_1",
-    "url": "dr-oswaldo-ramos",
     "name": "Dr. Oswaldo Ramos",
     "description": "Especialista Diagnóstico por imagen, Expresidente Asociación Radiológica de Venezuela, expresidente y profesor del CIR, Docente, Direccion de unidades. Especialista Diagnóstico por imagen, imágenes IA.",
     "country": "Venezuela",
@@ -10,7 +9,6 @@
   },
   {
     "id": "speaker_2",
-    "url": "dr-jesus-sanabria",
     "name": "Dr. Jesús Sanabria",
     "description": "Especialista Diagnóstico por imagen, Hospital Italiano Buenos Aires, Argentina. Fellow en Imágenes Corporales.",
     "country": "Colombia",
@@ -19,7 +17,6 @@
   },
   {
     "id": "speaker_3",
-    "url": "dra-diana-rodriguez",
     "name": "Dra. Diana Milena Rodríguez Merchán ",
     "description": "Obstetra y ginecóloga, Universidad Nacional de Colombia. Uroginecóloga y ecografista de piso pélvico, Universidad de Chile. Coordinadora Unidad de Uroginecología Sura, Medellin. Coordinadora unidad de Piso pélvico, Clínica del Prado. Docente Universidad Nacional de Colombia.",
     "country": "Colombia",
@@ -28,7 +25,6 @@
   },
   {
     "id": "speaker_4",
-    "url": "dr-daniel-noreña",
     "name": "Dr. Daniel Noreña Rengifo",
     "description": "Especialista Diagnóstico por imagen. Fellow Musculoesquelético, experto en Ecografía Dermatológica y Estética. Dermasonido Medellín, Colombia.",
     "country": "Colombia",
@@ -37,11 +33,26 @@
   },
   {
     "id": "speaker_5",
-    "url": "dr-sergio-andres-galvis",
     "name": "Dr. Sergio Andrés Galvis",
     "description": "Especialista Diagnóstico por Imágenes, subespecialista en Músculo Esquelético, Instituto Rossi, Buenos Aires, Argentina.",
     "country": "Colombia",
     "city": "",
     "image": "speaker-5.png"
+  },
+  {
+    "id": "speaker_6",
+    "name": "Dr. Jimmy E. Prieto Sarmiento",
+    "description": "Especialista Diagnóstico por Imágenes. Presidente ASONORTERX",
+    "country": "Colombia",
+    "city": "",
+    "image": "speaker-6.png"
+  },
+  {
+    "id": "speaker_7",
+    "name": "Dr. Oscar Andrés Parada",
+    "description": "Especialista Diagnóstico por Imágenes. Docente de universidad",
+    "country": "Colombia",
+    "city": "",
+    "image": "speaker-7.png"
   }
 ]
